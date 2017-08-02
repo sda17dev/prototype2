@@ -1,0 +1,52 @@
+# Meta
+title: 서울기록원
+description: |
+  서울기록원은 서울의 과거, 현재 기록을 보관하고 있습니다.
+
+url: 
+baseurl: ''
+
+timezone: 'Asia/Seoul'
+permalink: pretty
+
+# SEO
+facebook:
+  app_id: 
+  publisher: 
+logo: 
+
+google_site_verification: 
+google_analytics: 
+
+# Build
+exclude:
+  - .jekyll-metadata
+  - .gitignore
+  - .ruby-version
+  - README.md
+  - LICENSE
+  - serve.sh
+  - debug.html
+
+sass:
+  style: :compressed
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  entity_output: :as_input
+  hard_wrap: false
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# collections
+collections:
+  rooms:
+    output: true
+    permalink: /room/:path/
+
+defaults:
+  -
+    scope:
+      path: _rooms
+    values:
+      layout: room

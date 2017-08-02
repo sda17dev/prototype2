@@ -1,0 +1,87 @@
+---
+layout: null
+body: |
+  <체험예술공간 꽃밭>은 아동청소년과 가족, 일반인을 대상으로 미술·연극 통합형 공연과 전시·교육·세라피 프로그램을 진행하는 전문예술집단입니다. 미술적 재료가 공연적 재료와 만나 공연이 펼쳐지고, 원초적인 물질과 재료와 물체들의 순수한 놀이를 통해 예술활동이 일어나고, 미술과 연극과 음악 등의 모든 장르가 그 경계를 허물고 통합됩니다. <꽃밭>의 프로그램들은 공연장, 미술관, 박물관, 대안공간, 야외 등 모든 공간을 예술적 향기로 가득 채워왔습니다.
+
+  <꽃밭>은 예술을 단지 체험하고 끝나는 것이 아니라 체험 자체가 예술이 되는 과정을 온몸으로 겪는 “체험예술”을 지향합니다. <꽃밭>의 공연들은 한국뿐 아니라 유럽, 아시아, 남미의 주요 페스티벌에 공식초청되어 ‘탁월한시각연출상’을 수상하는 등 큰 주목을 받았고, 한국과 한국예술을 세계에 알리는데 앞장서고 있습니다.
+
+  <꽃밭>은 <비주얼씨어터 꽃>의 아동청소년프로그램이 독립되어서 만들어진 단체입니다. <꽃밭>의 프로그램들은 대표인 이철성이 2000-2003년 동안 이스라엘의 The School of Visual Theater에서 공부하면서, 공연활동을 하면서 처음으로 기획되었습니다. 2004년 이후 지금까지 국내외의 공연과 교육현장에 초대되어 지속적인 보완 발전을 거듭하였고 그 우수성을 인정받아왔습니다.
+
+  <꽃밭>은 전문가(예술가와 교사, 강사 등의 예술교육 매개자)를 위한 워크숍과 일반인을 위한 세라피(치유) 프로그램을 통해 예술인력 양성과 예술치유의 확산에도 힘쓰고 있습니다.
+
+  <꽃밭>은 체험예술을 통해서 일상의 공간이 예술적 공간으로 변하고, 이 세상의 모든 하찮은 것들이 우리의 친구가 되고, 그로 인해서 삶이 더욱 풍요롭고 소중하게 변화되기를 바랍니다.
+
+
+
+
+
+  체험예술공간　꽃밭 대표 이철성
+
+---
+{% capture test %}{{ page.body }}{% endcapture %}
+
+{{ test | escape | smartify | newline_to_br | markdownify | replace: '<br /><br />', '<br />'}}
+
+
+{% comment %}
+
+각의 부제와 형태 살려서
+예. 살아나는 미술관, 살아나는 박물관! ‘몸으로 만드는 예술품’ (교육+제작+전시+퍼포먼스)
+
+순서
+
+<아동 청소년 가족>
+몸으로 만드는 예술품
+미디어놀이터-내가 그린 그림 속으로 풍덩
+조각그림자 공연과 극놀이
+아무거나 줄인형 공연과 극놀이
+오브제 연극놀이
+엄마와 아이가 함께 떠나는 신나는 연극여행
+
+<성인-일반인 과정 : 치유>
+보이스 세라피
+몸-오브제 세라피
+
+<성인-전문가 과정>
+기존 5개 전부
+
+아동 청소년 가족
+body-sculpture - 몸으로 만드는 예술품
+into-my-drawing - 내가 그린 그림속으로 풍덩
+shadow - 조각그림자 공연과 극놀이
+whatever - 아무거나 줄인형 공연과 극놀이
+objet-play - 오브제 연극놀이
+mom-child - 엄마와 아이가 함께 떠나는 신나는 연극여행!
+
+성인 일반인 과정: 치유
+voice-therapy - 보이스 세라피
+body-objet-therapy - 몸-오브제 세라피
+
+성인 전문가 과정
+visual-theater-workshop - Visual Theater 워크숍
+body-objet-workshop - 몸과 오브제(오브제 씨어터) 워크숍
+voice-movement-workshop - 보이스와 움직임 워크숍
+poetry-perfomance-workshop - 시(詩) 퍼포먼스 워크숍
+video-theater-workshop - 비디오영상 씨어터 워크숍
+
+--
+im-objet - 연극놀이-나는 오브제다!
+video-play - 비디오 영상 극놀이
+
+{{ site.courses.size }}
+{% for course in site.courses %}
+{{ course.slug }} - {{ course.title }}
+{% endfor %}
+
+{% for group in site.data.courses-order %}
+  {% assign items = group | split: ' - ' %}
+  {{ items | inspect }}
+  <div class="group clearfix">
+    <h3 class="text-success">{{ items | first }}</h3>
+    {% for item in items %}{% if forloop.index != 1 %}{% assign title = item %}{% include course-list-item.html %}{% endif %}{% endfor %}
+  </div>
+{% endfor %}
+
+
+
+{% endcomment %}

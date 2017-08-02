@@ -1,0 +1,40 @@
+//== Colors
+//
+
+$gray-darker: #222;
+$gray-dark: #333;
+$gray: #555;
+$gray-light: #777;
+$gray-lighter: #eee;
+
+$brand-primary: #646464;
+$brand-success: #5cb85c;
+$brand-info: #5bc0de;
+$brand-warning: #fd5e0f;
+$brand-danger: #d9534f;
+
+//== Typography
+//
+
+$font-size-base: 16px;
+$font-family-base: 'Noto Sans KR', 'Malgun Gothic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$jumbotron-heading-font-size: ceil(($font-size-base * 3.5));
+
+$navbar-border-radius: 0;
+
+$display1-size: 6rem !default;
+$display2-size: 5.5rem !default;
+$display3-size: 4.5rem !default;
+$display4-size: 3rem !default;
+
+$display1-weight: 300 !default;
+$display2-weight: 300 !default;
+$display3-weight: 300 !default;
+$display4-weight: 300 !default;
+
+
+$headings-font-family: Lato, Roboto, 'Nanum Square';
+$headings-color: $brand-primary;
+
+@import "bootstrap/variables"

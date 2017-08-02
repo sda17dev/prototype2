@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% if google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}" />{% endif %}
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/jquery-ui.css' | relative_url }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/archive.css' | relative_url }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/responsive.css' | relative_url }}"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/2/xeicon.min.css">
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="{{ '/assets/css/ie.css' | relative_url }}"/><![endif]-->
+    <!--[if lt IE 9]><script src="{{ '/assets/js/html5.js' | relative_url }}"></script><![endif]-->
+    <script type="text/javascript" src="{{ 'assets/js/jquery-1.11.3.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ 'assets/js/jquery-ui.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/archive.js' | relative_url }}"></script>
+    <script type="text/javascript" src="//www.seoul.go.kr/seoulgnb/gnb.js"></script>
+    <script type="text/javascript">
+      // GNB 로딩 스크립트
+      // Yjs.Gnb.init('사이트 ID', 'GNB 표출영역 ID');
+      window.onload = function() {
+        Yjs.Gnb.init('G188', 'seoul-common-gnb', {
+          holder: { maxWidth: '1680px', paddingLeft: '40px' },
+          menu: { marginRight: '40px' }
+        });
+      };
+    </script>
+  </head>
+  <body{% if page.url %} class="{{ page.url | replace:'/',' ' | lstrip | rstrip }}{% if page.url == '/' %}front{% endif %}"{% endif %}>
+
+    {{ content }}
+
+  </body>
+</html>

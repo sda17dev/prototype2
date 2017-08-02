@@ -1,0 +1,43 @@
+/* subtitle background images */
+
+.th01.solution {background:url(../images/bg_st_solution.jpg) right bottom no-repeat}
+.th01.deptstore {background:url(../images/bg_st_deptstore.jpg) right bottom no-repeat}
+.th01.consulting {background:url(../images/bg_st_consulting.jpg) right bottom no-repeat}
+.th01.curriculum {background:url(../images/bg_st_school.jpg) right bottom no-repeat}
+.th01.knowhow {background:url(../images/bg_st_knowhow.jpg) right bottom no-repeat}
+.th01.mypage {background:url(../images/bg_st_mypage.jpg) right bottom no-repeat}
+
+.tc04_01.construction {background:url(../images/bg_st_construction.jpg) right 50% no-repeat}
+.tc04_01.httpd404 {background:url(../images/bg_st_404.jpg) right 50% no-repeat}
+
+.tc05 {margin-bottom:28px}
+
+.btn04.gray {background:#999;}
+
+footer .contact p font {font-size:19px;}
+.translated-ltr .navigator {top:40px;}
+
+section {display:block;}
+.clear {clear:both;}
+
+#post_file, #post_file2 {height:26px;border:solid 1px #ccc;margin-top:8px;line-height:26px;background:#fff}
+#post_file2 {margin-bottom:8px;}
+
+.solution_page font {font-size:.9em}
+.solution_page .sl_cf02 {width:30%;}
+.solution_page .sl_cf02.first {padding-right:1%;}
+.solution_page .sl_cf02.second{padding-left:2%;padding-right:2%;}
+.solution_page .sl_cf02.third{padding-left:2%;padding-right:2%;border-right:none}
+
+.dfbox {display:none;}
+.dfbox h3 {text-align:right;font-size:13px;color:#666}
+.dfbox ul {margin:0;padding:0}
+.dfbox ul li {margin:0 !important;padding:0 0 4px 0 !important;border:0 !important;width:100%;line-height:18px;list-style:disc;list-style-position:inside;font-size:12px;background:none !important}
+.dfbox ul li:hover {background:none !important}
+.dfbox ul li em {color:#f50;font-weight:bold;}
+.dfbox dl {margin:10px}
+.dfbox dl dt {border:solid 1px #dedede;padding:8px;background:#ededed;}
+.dfbox dl dd {padding:8px;font-size:12px}
+.dfbox dl dd table {border-top:solid 1px #ccc;border-left:solid 1px #ccc;margin:10px;padding:0}
+.dfbox dl dd table th {border-bottom:solid 1px #ccc;border-right:solid 1px #ccc;background:#ccc;font-weight:bold;}
+.dfbox dl dd table td {border-bottom:solid 1px #ccc;border-right:solid 1px #ccc;}

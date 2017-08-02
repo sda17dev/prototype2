@@ -1,0 +1,40 @@
+@import url("ie_sjh.css");
+*:first-child+html header{position:relative}
+*:first-child+html header nav{width:380px}
+*:first-child+html header nav form{position:absolute;top:48px;right:100px}
+*:first-child+html header nav form{clear:none}
+.tc01{behavior:url(/wp-content/themes/chongmu/css/PIE.htc)}
+section.banner .btn02{outline: none;}
+*:first-child+html .ng07 dd a.d0 em{position:relative;top:-4px;left:3px}
+.cf01 button{position:relative;top:-3px}
+.ng01 li.lang{top:-4px}
+html>body .ng01 li.lang{top:-6px}
+*:first-child+html .ng01 li.lang .goog-te-gadget-simple .goog-te-gadget-icon{display:none}
+.etc01{filter: alpha(opacity=70)}
+html>body .btn05{line-height:30px}
+.fc01 .td01 #user_agree{position:relative;top:3px}
+/*
+.tc01 a.thumb span{filter: alpha(opacity=0)}
+.tc01.over a.thumb span{filter: alpha(opacity=50)}
+*:first-child+html .tc07 .con dd{width:auto;}
+html>body .bt03 a{box-shadow:1px 1px 0px 0px #bdbdbd;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body #commentform textarea{box-shadow:inset 1px 1px 2px #ececec;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body #commentform input{box-shadow:inset 1px 1px 2px #ececec;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body #commentform #submit{box-shadow:1px 1px 0px 0px #bababa;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body #commentform .tc02 a.thumb{box-shadow:0px 0 3px 1px #ccc;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .fc02 .thumb a img{border-radius:5px;box-shadow:0px 1px 3px 1px #d3d3d3;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .fc03 .postArea .reply .avatar{border:1px solid #f8f8f8;border-radius:50px;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .fc02 .thumb a img{border-radius:5px;box-shadow:0px 1px 3px 1px #d3d3d3;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .fc03 .postArea .reply textarea{box-shadow:inset 1px 1px 2px #ececec;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .fc03 .postArea .reply input{box-shadow:inset 1px 1px 2px #ececec;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .fc03 .postArea .reply button{box-shadow:1px 1px 0px 0px #bababa;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body header .cf01{border-radius:11px;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body nav menu li.on a.d0{box-shadow: inset 0 0 10px #211;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .lc01 .lc01 .nosearch dd ul{border-radius:4px;box-shadow:1px 1px 1px #ccc;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .tc01{border-radius:5px;box-shadow:0 0 2px 1px #dfdfdf;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .tc02 dl dd.sns a{border-radius:25px;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .tc03 dd ul li a.bt01{border-radius:4px;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .tc04 dd.sns a{border-radius:25px;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .tc06 dl dd.sns a{border-radius:25px;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+html>body .thumb.view a img{box-shadow:1px 0 1px 1px #333;behavior:url(/wp-content/themes/stackr/css/PIE.htc)}
+*/

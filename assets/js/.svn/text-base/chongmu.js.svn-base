@@ -1,0 +1,612 @@
+/*
+Theme Name: chongmu.com
+Theme URI: http://www.chongmu.com
+Author: css3studio, Stackr Inc.
+Version:1.0
+*/
+var slide_term = 6000; //슬라이딩 간격시간(ms)
+
+//스크롤 이벤트 핸들링
+var timeout;
+$(window).scroll(function(e){
+	/* 메뉴고정 */
+	if ($(window).scrollTop() > $('header').height()) {         
+		$("section.navigator").css("position","fixed");
+		if($('html').hasClass('translated-ltr')) 	$("section.navigator").css("top",40);
+		else $("section.navigator").css("top",0);
+		$("section.sub").css("paddingTop",49);
+	} else {
+		$("section.navigator").css("position","relative");
+		$("section.navigator").css("top",0);
+		$("section.sub").css("paddingTop",0);
+	}
+	clearTimeout(timeout);
+    timeout = setTimeout(function() {
+		//사이드 퀵메뉴
+		if($('section.sub .slidingMenu').length > 0){
+			var limit = $('header').height() + $('section.sub').height() - 500;
+			//console.log(limit);
+			if ($(window).scrollTop() > 100 && $(window).scrollTop() < limit) {         
+				$('.slidingMenu').animate({
+					top: $(document).scrollTop() - 50
+				}, 500, function() {
+				});
+			}else if ($(window).scrollTop() >= limit) {         
+				$('.slidingMenu').animate({
+					top: limit
+				}, 500, function() {
+				});
+			}else if($(window).scrollTop() <= ($('header').height()+$('section.navigator').height()+40)){
+				$('.slidingMenu').animate({
+					top: 40
+				}, 500, function() {
+				});
+			}
+		}
+    }, 100);
+});
+
+$(document).ready(function() {
+	init();
+	form_validate();
+});
+
+function init(){
+    setTimeout(scrollTo,0,0,1);
+    //크롬인 경우 구글번역 연결
+    if($.browser.safari || $.browser.msie) $(".ng01").addClass('chrome');	
+
+    //서브메뉴 높이 계산
+    var sub_menu_height = 0;
+    $('header .fc01 .ng03').each(function(){
+    	if(sub_menu_height < $(this).height()) sub_menu_height = $(this).height();
+    });
+    sub_menu_height = sub_menu_height + 30;
+    
+	var set_timer1;
+	var is_mouse_on_sub = false;
+	//헤더 LNB 메뉴
+	$("menu li a").bind("mouseenter",function(){
+		setTimeout(function(){
+			if(is_mouse_on_sub){
+//				$('header .submenu').css('on');
+				$('header .submenu').animate({
+					height: sub_menu_height
+				}, 100, function() {
+				});
+
+			}
+	  	},300);
+		clearTimeout(set_timer1);
+	});
+	$("menu li a").bind("mousemove",function(){
+		is_mouse_on_sub = true;
+	});
+	$("menu li a").bind("mouseleave",function(){
+		var that = $(this);
+		set_timer1 = setTimeout(function(){
+			if(!is_mouse_on_sub){
+				$('header .submenu').animate({
+					height: 0
+				}, 100, function() {
+				});
+			}
+			// $('header .submenu').removeClass('on');
+		},200);
+	  	is_mouse_on_sub = false;
+	});
+	$("header .submenu").bind("mouseenter",function(){
+	  	is_mouse_on_sub = true;
+	});
+	$("header .submenu").bind("mouseleave",function(){
+	  	is_mouse_on_sub = false;
+	  	//$('header .submenu').removeClass('on');
+		$('header .submenu').animate({
+			height: 0
+		}, 100, function() {
+		});
+	});
+	//서브 페이지 네이게이션 메뉴
+	$(".ng07 dd a.d0").bind("mouseenter",function(){
+		$(this).parent().siblings().removeClass('on');
+		$(this).parent().addClass('on');
+	});
+	$(".ng07 dd a.d0").bind("mouseleave",function(){
+		$(this).parent().removeClass('on');
+	});
+	
+	$(".ng07 dd ul").bind("mouseenter",function(){
+		$(this).parent().addClass('on');
+	});
+	$(".ng07 dd ul").bind("mouseleave",function(){
+	  	$(this).parent().removeClass('on');
+	});
+	//메인배너 닫기버튼
+	$("section.banner a.btn02").bind("click",function(){
+		if($(this).parent().hasClass('close')){
+			$(this).parent().removeClass('close');
+			$('section.banner').animate({
+				height: 257
+			}, 200, function() {
+			});
+			$('section.banner .ib01').animate({
+				height: 255
+			}, 200, function() {
+			});
+		}else{
+			$(this).parent().addClass('close');
+			$('section.banner').animate({
+				height: 2
+			}, 200, function() {
+			});
+			$('section.banner .ib01').animate({
+				height: 0
+			}, 200, function() {
+			});
+		}
+		return false;
+	});
+	//로그인 닫기버튼
+	$('.pp02 a.close').bind("click",function(){
+		$('.pp02').css('display','none');
+	});
+	//슬라이드 구성
+	if($('.ib01 .slide li').length > 0){
+		$('.ib01').slides({
+			play: slide_term,
+			pause: 2500,
+			preload: true,
+			hoverPause: true,
+			//prev: 'prev',
+			//next: 'next',
+			container: 'slide',
+			currentClass: 'on'		
+		});
+	}else{
+		$('section.banner').addClass('close');
+		$('section.banner').css('height',2);
+		$('section.banner .ib01').css('height',0);
+	}
+	//폼 선택상자 스타일링
+	$("form select").selectBoxIt();
+	$("#select_email").bind("change",function(){
+		$('#user_email2').val($(this).val());
+	});
+	$(".cf02 .btn06, .cf06 .btn06, .cf02_03 .btn06").bind("click",function(){
+		$('.pp01').css('display','block');
+		return false;
+	});
+	$(".pp01 a.close").bind("click",function(){
+		$('.pp01').css('display','none');
+		return false;
+	});
+	$(".cf02 .th02 #user_agree_all, .cf02_02 .th02 #user_agree_all").bind("click",function(){
+		if($(this).attr('checked')=="checked")
+			$('.lc03 input:checkbox').attr('checked',true);
+		else
+			$('.lc03 input:checkbox').attr('checked',false);
+	});
+	//정책 전문 보기
+	$(".lc03 .btn05").bind("click",function(){
+		$(this).parent().next('.toggle').animate({
+			height: 140
+		}, 200, function() {
+		});
+		return false;
+	});
+	$(".lc03 .toggle a.close").bind("click",function(){
+		$(this).parent().animate({
+			height: 0
+		}, 200, function() {
+		});
+		return false;
+	});
+	//관리자 문의하기 폼 열기
+	$(".tc06 .btn04").bind("click",function(){
+		$('.tc06 form').animate({
+			height: 400
+		}, 200, function() {
+		});
+		return false;
+	});
+	//마이페이지 고객센터
+	$(".lc01.customer .title a").bind("click",function(){
+		$(this).parent().parent().siblings('.toggle').find('td').css('height',0);
+		$(this).parent().parent().siblings('.toggle').find('td').css('borderBottom','none');
+		$(this).parent().parent().siblings('.toggle').find('td div').css('height',0);
+		$(this).parent().parent().siblings('.toggle').find('td div').css('paddingTop',0);
+		$(this).parent().parent().siblings('.toggle').find('td div').css('paddingBottom',0);
+		
+		$(this).parent().parent().next().find('td').css('height','auto');
+		$(this).parent().parent().next().find('td').css('borderBottom','1px solid #d7d7d7');
+		$(this).parent().parent().next().find('td div').css('height','auto');
+		$(this).parent().parent().next().find('td div').css('paddingTop',10);
+		$(this).parent().parent().next().find('td div').css('paddingBottom',10);
+		return false;
+	});
+	//솔루션 더보기
+	$("ul.sl_lc04 a").bind("click",function(){
+		$(this).siblings('.dfbox').slideToggle();
+	});
+}
+
+//정규식
+var re_id = /^[a-zA-Z_]{1}[a-zA-Z0-9_]{6,15}$/; // 아이디 검사식
+//var re_id = /^[a-z0-9_-]{3,15}$/; // 아이디 검사식
+var re_pw = /^[a-z0-9_-~!@#$%^&*()-+=]{6,15}$/; // 비밀번호 검사식
+var re_mail = /^([\w\.-]+)@([a-z\d\.-]+)\.([a-z\.]{2,6})$/; // 이메일 검사식
+//var re_url = /^(https?:\/\/)?([a-z\d\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$/; // URL 검사식
+var re_phone = /^\d{2,3}-\d{3,4}-\d{4}$/; // 전화번호 검사식
+var re_cell = /^\d{3}-\d{3,4}-\d{4}$/; // 휴대폰 검사식
+var re_post = /^\d{3}-?\d{3}$/;
+var re_regnum = /^[0-9]{6}-?[0-9]{7}$/;
+
+//폼 유효성 검사
+function form_validate(){
+	//검색 유효성 검사
+	$(".cf01, .cf03, .cf10").bind('submit', function() {
+		var input = $("input",$(this));
+		if(input.val().trim() == ""){
+			alert("검색어를 입력해 주세요");
+			input.focus();
+			return false;
+		}
+		else
+			return true;
+	});
+	// 회원가입 - 멤버십
+	$("form.cf02.membership").validate({
+		rules: {
+			user_name: {
+				required: true
+			},
+			user_id: {
+				required: true,
+				minlength: 6,
+				maxlength: 15
+			},
+			user_pw: {
+				required: true,
+				minlength: 6,
+				maxlength: 15
+			},
+			user_pw2: {
+				equalTo: "#user_pw"
+			},
+			user_email2: {
+				validemail: true	
+			},
+			user_phone3: {
+				validphone: true	
+			},
+			user_company: "required",
+			//user_agree_14: "required",
+			user_agree_3: "required",
+			user_agree_svc: "required",
+			user_agree_prv: "required",
+			pay_name: {
+				required: true
+			}
+		},
+		messages: {
+			user_name: "본인의 실명을 입력해 주세요.",
+			user_id:  "아이디는 6~15자리이어야 합니다.",
+			user_pw: "비밀번호를 6~15자 사이로 입력해 주세요.",
+			user_pw2:  "비밀번호가 일치하지 않습니다.",
+			user_email2: "정확한 이메일을 입력하세요",
+			user_phone3: "정확한 전화번호를 입력하세요",
+			//user_agree_14: "[체크하세요]",
+			user_company: "회사명을 입력해 주세요.",			
+			user_agree_3: "제3자 정보제공에 동의하셔야 합니다.",
+			user_agree_svc: "서비스 이용약관에 동의하셔야 합니다.",
+			user_agree_prv: "개인정보 취급방침에 동의하셔야 합니다.",
+			pay_name: "입금자명을 입력해 주세요."
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr("name") == "user_name" || element.attr("name") == "user_id" ) {
+			  element.siblings('span').css('color','red');
+			} else {
+			  error.insertAfter(element);
+			}
+		},
+		success: function(label){
+			if (label.attr('for') == "user_name" || label.attr('for') == "user_id" ) {
+			  $("#"+label.attr('for')).siblings('span').css('color','#999');
+			} else {
+			  label.css('display','none');
+			}
+		}
+  	});
+	// 회원가입 - 일반
+	$("form.cf02").validate({
+		rules: {
+			user_name: {
+				required: true
+			},
+			user_id: {
+				required: true,
+				minlength: 6,
+				maxlength: 15
+			},
+			user_pw: {
+				required: true,
+				minlength: 6,
+				maxlength: 15
+			},
+			user_pw2: {
+				equalTo: "#user_pw"
+			},
+			user_email2: {
+				validemail: true	
+			},
+			user_phone3: {
+				validphone: true	
+			},
+			user_company: "required",
+			//user_agree_14: "required",
+			user_agree_3: "required",
+			user_agree_svc: "required",
+			user_agree_prv: "required",
+			pay_name: {
+				required: true
+			}
+		},
+		messages: {
+			user_name: "본인의 실명을 입력해 주세요.",
+			user_id:  "아이디는 6~15자리이어야 합니다.",
+			user_pw: "비밀번호를 6~15자 사이로 입력해 주세요.",
+			user_pw2:  "비밀번호가 일치하지 않습니다.",
+			user_email2: "정확한 이메일을 입력하세요",
+			user_phone3: "정확한 전화번호를 입력하세요",
+			user_company: "회사명을 입력해 주세요.",			
+			//user_agree_14: "[체크하세요]",			
+			user_agree_3: "제3자 정보제공에 동의하셔야 합니다.",
+			user_agree_svc: "서비스 이용약관에 동의하셔야 합니다.",
+			user_agree_prv: "개인정보 취급방침에 동의하셔야 합니다.",
+			pay_name: "입금자명을 두자 이상 입력해 주세요."
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr("name") == "user_name" || element.attr("name") == "user_id" ) {
+			  element.siblings('span').css('color','red');
+			} else {
+			  error.insertAfter(element);
+			}
+		},
+		success: function(label){
+			if (label.attr('for') == "user_name" || label.attr('for') == "user_id" ) {
+			  $("#"+label.attr('for')).siblings('span').css('color','#999');
+			} else {
+			  label.css('display','none');
+			}
+		}
+	});
+	// 교육수강신청
+	$("form.cf02_02").validate({
+		rules: {
+			user_email2: {
+				required: true,
+				validemail: true	
+			},
+			user_phone3: {
+				validphone: true	
+			},
+			user_agree_3: "required",
+			user_agree_svc: "required",
+			user_agree_prv: "required",
+			pay_name: {
+				required: true
+			}
+		},
+		messages: {
+			user_email2: "정확한 이메일을 입력하세요",
+			user_phone3: "정확한 전화번호를 입력하세요",
+			user_agree_3: "제3자 정보제공에 동의하셔야 합니다.",
+			user_agree_svc: "서비스 이용약관에 동의하셔야 합니다.",
+			user_agree_prv: "개인정보 취급방침에 동의하셔야 합니다.",
+			pay_name: "입금자명을 입력해 주세요."
+		}
+	});
+	// 비밀번호 변경
+	$("form.cf02_03").validate({
+		rules: {
+			user_pw: {
+				required: true,
+				minlength: 6,
+				maxlength: 15
+			},
+			user_pw2: {
+				equalTo: "#user_pw"
+			}
+		},
+		messages: {
+			user_pw: "비밀번호를 6~15자 사이로 입력해 주세요.",
+			user_pw2:  "비밀번호가 일치하지 않습니다."
+		}
+	});
+	// 아이디 찾기
+	$("form.cf02_findId").validate({
+		rules: {
+			user_name: {
+				required: true
+			},
+			user_email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			user_name: "이름 확인",
+			user_email:  "이메일 확인"
+		}
+	});
+	$("form.cf02_findPassword .fc01 .btn03").bind("click", function(){
+		$("form.cf02_findPassword").attr('action',$(this).attr('href'));
+		$("form.cf02_findPassword").submit();
+		return false;
+	});
+	// 비번 찾기
+	$("form.cf02_findPassword").validate({
+		rules: {
+			user_id: {
+				required: true
+			},
+			user_name: {
+				required: true
+			},
+			user_email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			user_id: "아이디 확인",
+			user_name: "이름 확인",
+			user_email:  "이메일 확인"
+		}
+	});
+	// 마이페이지 > 비밀번호 확인
+	$("form.cf05").validate({
+		rules: {
+			user_pw: "required"
+		},
+		messages: {
+			user_pw: "비밀번호를 입력해 주세요."
+		}
+	});
+	// 고객센터 > 관리자에게 문의
+	$(".tc06 form").validate({
+		rules: {
+			q_title: "required",
+			q_content: "required"
+		},
+		messages: {
+			q_title: "제목을 입력해 주세요.",
+			q_content: "내용을 입력해 주세요."
+		}
+	});
+	// 자유게시판 글쓰기
+	$("form.cf07").validate({
+		rules: {
+			title: "required",
+			comment: "required"
+		},
+		messages: {
+			title: "제목을 입력해 주세요.",
+			comment: "내용을 입력해 주세요."
+		}
+	});
+	// 마이페이지 > 회원탈퇴
+	$(".cf09").validate({
+		rules: {
+			user_pw: "required",
+			user_bank: "required",
+			user_bank_ac: "required",
+			user_agree: "required"
+		},
+		messages: {
+			user_pw: "비밀번호를 입력하세요.",
+			user_bank: "은행명을 입력하세요.",
+			user_bank_ac: "은행계좌를 입력하세요.",
+			user_agree: "[동의해 주세요.]"
+		}
+	});
+	// 상담신청
+	$("form.cf09_01").validate({
+		rules: {
+			user_name: {
+				required: true
+			},
+			user_company: {
+				required: true
+			},
+			user_email2: {
+				required: true,
+				validemail: true	
+			},
+			user_phone3: {
+				required: true,
+				validphone: true	
+			},
+			user_query: {
+				required: true
+			}
+		},
+		messages: {
+			user_name: "이름을 입력해 주세요.",
+			user_company:"회사를 입력해 주세요.",
+			user_email2: "정확한 이메일을 입력하세요",
+			user_phone3: "정확한 전화번호를 입력하세요",
+			user_query: "문의사항을 입력해 주세요."
+		},
+		submitHandler : function(form){
+			var request_type = $(form).find('input[name="request_type"]').val();
+			
+			var user_name = $(form).find('input[name="user_name"]').val();
+			var user_company = $(form).find('input[name="user_company"]').val();
+			var user_email = $(form).find('input[name="user_email"]').val()+'@'+$(form).find('input[name="user_email2"]').val();
+			var user_phone = $(form).find('span#user_phone1SelectBoxItText').attr('data-val')+'-'+$(form).find('input[name="user_phone2"]').val()+'-'+$(form).find('input[name="user_phone3"]').val();
+			var post_content = $(form).find('textarea[name="user_query"]').val();
+			$.post('/wp-admin/admin-ajax.php', {
+				"action":"cm_counsel",
+				"request_type":request_type,
+				"user_name":user_name,
+				"user_company":user_company,
+				"user_email":user_email,
+				"user_phone":user_phone,
+				"post_content":post_content
+			}, function(response){
+					if(response.success == true){
+						alert(response.msg);
+					}else{
+						alert(response.msg);
+					}
+				}, "json");
+			return false;
+		}
+	});
+	// 회원초대하기
+	$("form.cf09_02").validate({
+		rules: {
+			user_email2: {
+				required: true,
+				validemail: true	
+			},
+			email_title: {
+				required: true,
+				minlength: 2
+			},
+			user_query: {
+				required: true
+			}
+		},
+		messages: {
+			user_email2: "정확한 이메일을 입력하세요",
+			email_title: "제목을 두자 이상 입력해 주세요.",
+			user_query: "초대문구를 입력해 주세요."
+		}
+	});
+	$.validator.addMethod("validemail", function(value, element) {
+		return re_mail.test($('#user_email').val()+'@'+$('#user_email2').val());
+	});
+	$.validator.addMethod("validphone", function(value, element) {
+		if($('#user_phone2').val() == '' && $('#user_phone3').val() == '') return true;
+		else return re_phone.test($('#user_phone1').val()+'-'+$('#user_phone2').val()+'-'+$('#user_phone3').val());
+	});
+}
+//트위터 게시하기
+function twitter(msg,url){
+	var href = "http://twitter.com/home?status=" + encodeURIComponent(msg) + " " + encodeURIComponent(url);
+	var win = window.open(href, 'twitter', '');
+	if (win){
+		win.focus();
+	}
+}
+//페이스북 게시하기
+function facebook(url){
+	var href = "http://www.facebook.com/sharer.php?u=" + url;
+	var win = window.open(href, 'facebook', '');
+	if(win) {
+		win.focus();
+	}
+}
+

@@ -1,0 +1,34 @@
+---
+
+- title: 검색결과_용산공원
+  url: /search/yongsan-gongwon
+
+- title: 검색결과_용산공원(시리즈 클릭)
+  url: /search/yongsan-gongwon/series
+
+- title: 기록찾기_최상위
+  url: /explore/
+
+- title: 기록찾기_시리즈
+  url: /explore/series/
+
+- title: 기록찾기_파일
+  url: /expolre/files/
+
+- title: 기록찾기_공통
+  url: /explore/common/
+
+- title: 세부보기_시리즈
+  url: /detail/series/
+
+- title: 세부보기_파일
+  url: /detail/file/
+
+- title: 세부보기_아이템
+  url: /detail/item/
+
+- title: 수집박스_즐겨찾기
+  url: /collection-box/favorites/
+
+- title: 리서치 가이드
+  url: /research-guides/

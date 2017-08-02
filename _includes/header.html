@@ -1,0 +1,30 @@
+<div id="skip-link">
+  <a href="#main-content">콘텐츠 바로가기</a>
+</div>
+<div id="seoul-common-gnb"></div>
+<header>
+  <div class="inner">
+    <div class="lg01"><a href="/">{{ site.title }}</a></div>
+    <nav>
+      <menu>
+        {% for item in site.data.menu %}
+        <li{% if page.url == item.url %} class="active"{% endif %}><a href="{% if item.url %}{{ item.url }}{% else %}#{% endif %}">{{ item.title }}</a></li>
+        {% endfor %}
+      </menu>
+      <ul class="ng01">
+        <li class="search"><a href="#"><i class="xi-search"></i>검색</a></li>
+        <li class="login"><a href="#"><i class="xi-user-o"></i>로그인</a></li>
+        <li class="collect"><a href="#"><i class="xi-box"></i>수집박스</a></li>
+      </ul>
+    </nav>
+    <form class="cf01" action="" method="post">
+      <fieldset>
+      <label for="search_query">검색어</label>
+      <input type="text" name="query" id="search_query"/>
+      <button class="btn01">검색</button>
+      <a class="btn01 btn01_01" href="#">상세검색</a>
+      <a class="btn01 btn01_02" href="#"><i class="xi-close"></i>닫기</a>
+      </fieldset>
+    </form>
+  </div>
+</header>

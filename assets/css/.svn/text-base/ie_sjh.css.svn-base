@@ -1,0 +1,5 @@
+.sl_tc01 .box{behavior:url(/wp-content/themes/chongmu/css/PIE.htc)}
+.sl_tc02 td.box{behavior:url(/wp-content/themes/chongmu/css/PIE.htc)}
+.sl_tc03 p{behavior:url(/wp-content/themes/chongmu/css/PIE.htc)}
+.sl_tc04 .box{behavior:url(/wp-content/themes/chongmu/css/PIE.htc)}
+.sl_tc06 dl{behavior:url(/wp-content/themes/chongmu/css/PIE.htc)}

@@ -1,0 +1,11 @@
+.th01.personal{background:url(../images/bg_th04_service.jpg) no-repeat right bottom}
+
+.tc04{line-height:47px;font-size:21pt;padding:83px 0 79px 32px;border-bottom:1px solid #ccc;color:#636363;margin-bottom:59px;text-align:left}
+.tc04 span{color:#ff5800}
+
+.lc05{text-indent:12px}
+.lc06{text-indent:25px}
+.lc07{text-indent:7px}
+.lc08{border-bottom:1px solid #ccc;padding-bottom:50px;margin-bottom:46px;color:#666666;font-size:14px;line-height:22px}
+.lc08 li{background:url(../images/bgn_list01.jpg) no-repeat 0 8px;padding:0 0 0 14px;line-height:25px}
+.lc08 li span{display:block;text-indent:31px}

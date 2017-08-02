@@ -1,0 +1,151 @@
+/*
+$('form.cf02').submit(function(){
+	var user_id = $('input[name="user_id"]').val();
+	if(!user_id){
+		alert("아이디를 입력하세요!");
+		$('input[name="user_id"]').focus();
+		return false;
+	}
+	var user_name = $('input[name="user_name"]').val();
+	if(!user_name){
+		alert("이름을 입력하세요!");
+		$('input[name="user_name"]').focus();
+		return false;
+	}					
+	var user_pw = $('input:password[name="user_pw"]').val();
+	if(!user_pw){
+		alert("비밀번호를 입력하세요!");
+		$('input[name="user_pw"]').focus();
+		return false;
+	}					
+	var user_pw2 = $('input:password[name="user_pw2"]').val();
+	if(!user_pw2){
+		alert("비밀번호확인을 해주세요!");
+		$('input[name="user_pw2"]').focus();
+		return false;
+	}
+	if(user_pw != user_pw2){
+		alert("비밀번호가 틀렸습니다.\n다시 확인해주세요.");
+		$('input[name="user_pw2"]').val('');
+		$('input[name="user_pw2"]').focus();
+		return false;
+	}
+	var id_chk = $('input:hidden[name="id_chk"]').val();
+	if(id_chk == 'no'){
+		alert("아이디 중복검색을 해주세요!");
+		$('input:hidden[name="id_chk"]').focus();
+		return false;
+	}
+	var email1 = $('input:text[name="user_email"]').val();
+	var email2 = $('input:text[name="user_email2"]').val(); 
+	if(!email1 || !email2){
+		alert("이메일을 정확하게 입력해주세요.");
+		if(!email1) $('input:text[name="user_email"]').focus();
+		else $('input:text[name="user_email2"]').focus();
+		return false;
+	}
+	var email = email1 + "@" + email2;		
+	var phone1 = $('select#user_phone1').val();
+	var phone2 = $('input:text[name="user_phone2"]').val();
+	var phone3 = $('input:text[name="user_phone3"]').val();
+	var phone = phone1 + "-" + phone2 + "-" + phone3;
+	var company = $('input:text[name="user_company"]').val();
+	var user_agree_14 = $('input#user_agree_14').is(":checked");
+	var user_agree_email = $('input#user_agree_email').is(":checked");
+	var user_agree_svc = $('input#user_agree_svc').is(":checked");
+	var user_agree_prv = $('input#user_agree_prv').is(":checked");
+	
+	if(!user_agree_14 || !user_agree_email || !user_agree_prv || !user_agree_svc){
+		alert("가입정책동의를 해주세요!");
+		return false;
+	}
+	var level = $('input:hidden[name="level"]').val();
+	if(level == 'ready_membership'){
+		var pay_name = $('input:text[name="pay_name"]').val();
+		if(!pay_name){
+			alert("입금자명을 입력해주세요.");
+			$('input:text[name="pay_name"]').focus();
+			return false;
+		}
+	}
+	$('input[name="actions"]').val("ok");
+});
+*/
+$('form.cf02 td.data a.btn05.id_search').bind("click",function(){	
+	var user_id = $('input#user_id').val();
+	var url = cm_ajax_url + 'login.php';										
+	jQuery.post(url, {user_id:user_id, "act":"id_chk"}, function(response){
+		if(response.msg == 'ok'){
+			$('input.id_chk').val('ok');
+			alert("사용하실 수 있는 아이디입니다.");
+		} else {
+			$('input.id_chk').val('no');
+			alert("이미 사용중인 아이디입니다.\n다른 아이디로 입력하여 주세요.");
+			$('input#user_id').val('');
+			$('input#user_id').focus();
+		}
+	}, "json");
+});
+/*
+$('form.cf02 td.data a.btn05.id_search').bind("click",function(){	
+	var user_id = $('input#user_id').val();
+	var url = cm_ajax_url + 'login.php';	
+	$.getJSON( url, {user_id:user_id, act:"id_chk"} ).done(function( json ) {
+	  
+		if(json.msg == 'ok'){
+			$('input.id_chk').val('ok');
+			alert("사용하실 수 있는 아이디입니다.");
+		} else {
+			$('input.id_chk').val('no');
+			alert("사용할 수 없는 아이디입니다.\n다시 입력해주세요.");
+			$('input#user_id').val('');
+			$('input#user_id').focus();
+		}
+		
+	});	
+	return false;
+});
+*/
+/*
+$('select#select_email').change(function(){
+	$value = $(this).val();
+	$('input:text[name="user_email2"]').val($value);
+});
+$('.lc03 li.toggle.user_agree_svc').bind("click",function(){
+	$(this).css("display","none");
+});
+$('.lc03 a.btn05.user_agree_svc').bind("click",function(){
+	$('.lc03 li.toggle.user_agree_svc').css("display","block");
+});
+$('.lc03 li.toggle.user_agree_prv').bind("click",function(){
+	$(this).css("display","none");
+});
+$('.lc03 a.btn05.user_agree_prv').bind("click",function(){
+	$('.lc03 li.toggle.user_agree_prv').css("display","block");
+});
+$('.lc03 a.btn05.user_agree_3').bind("click",function(){
+	$('.lc03 li.toggle.user_agree_3').css("display","block");
+});
+$('input:checkbox[name="user_agree_all"]').click(function(){
+	var chk = $(this).is(":checked");
+	if(chk){ 
+		$('input:checkbox[name="user_agree_14"]').attr('checked', true);
+		$('input:checkbox[name="user_agree_email"]').attr('checked', true);
+		$('input:checkbox[name="user_agree_svc"]').attr('checked', true);
+		$('input:checkbox[name="user_agree_prv"]').attr('checked', true);
+		$('input:checkbox[name="user_agree_3"]').attr('checked', true);
+	} else {
+		$('input:checkbox[name="user_agree_14"]').attr('checked', false);
+		$('input:checkbox[name="user_agree_email"]').attr('checked', false);
+		$('input:checkbox[name="user_agree_svc"]').attr('checked', false);
+		$('input:checkbox[name="user_agree_prv"]').attr('checked', false);
+		$('input:checkbox[name="user_agree_3"]').attr('checked', false);
+	}
+});
+*/
+
+$('td.data.addr a').bind("click",function(){
+	
+	myWindow = window.open(cm_zip_url,"myWindow","width=565,height=532");    // Opens a new window
+
+});
