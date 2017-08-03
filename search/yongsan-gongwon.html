@@ -6,17 +6,15 @@ keyword: 용산공원
 {% comment %} 시리즈 + 파일 + 아이템 배열 합치기!! {% endcomment %}
 
 {% assign results = "" | split: "" %}
-{% for ser in site.data.series %}
-  {% assign results = results | push: ser %}
+{% for set in site.data.series %}
+  {% assign results = results | push: set %}
 {% endfor %}
-{% for fil in site.data.file %}
-  {% assign results = results | push: fil %}
+{% for file in site.data.files %}
+  {% assign results = results | push: file %}
 {% endfor %}
-{% for ite in site.data.item %}
-  {% assign results = results | push: ite %}
+{% for item in site.data.items %}
+  {% assign results = results | push: item %}
 {% endfor %}
-
-
 
 <div class="fc04" id="main-content">
   <div class="inner">
