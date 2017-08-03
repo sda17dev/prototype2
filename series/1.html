@@ -1,0 +1,94 @@
+---
+layout: page
+search_result_count: 35,800
+hierachy:
+  first: Hierarchy 1(Fonds)
+  second: Hierarchy 2(Sub Fonds)
+  third: Hierarchy 3(series)
+selected: 새로운 용산공원 조성방안 마련
+---
+
+
+  <div class="inner">
+    <div class="TopA">
+      <ul class="ng06">
+        <li class="home"><i class="xi-home-o"></i><a href="#">홈</a></li>
+        <li><a href="#">검색</a></li>
+        <li><a href="/sda-prototype/html/01_search_our_record.html">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li>
+        <li class="current"><a href="#">{{ page.selected }}</a></li>
+      </ul>
+    </div>
+    <div class="lowerA">
+      <dl class="ng07">
+        <dt>현재위치 :</dt>
+        <dd>
+          <ul>
+            <li class="home"><i class="xi-home"></i><a href="#">{{ page.hierachy.first }}</a></li>
+            <li class="d1"><i class="xi-tab"></i><a href="#">{{ page.hierachy.second }}</a></li>
+            <li class="d2"><i class="xi-tab"></i><a href="#">{{ page.hierachy.third }}</a></li>
+            <li class="d3 current"><i class="xi-tab"></i><a href="#">{{ page.selected }}</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <dl class="th01">
+        <dt><h1>{{ page.selected }}</h1></dt>
+      </dl>
+
+      <div class="fc06">
+        <div class="leftA">
+          <ul class="lc02">
+            {% for set in site.data.series %}
+            <li{% if forloop.first == true %} class="selected"{% endif %}>
+              <dl>
+                <dt><a href="#">{{ set.title }}</a></dt>
+                <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
+              </dl>
+              <a class="desc" href="#">세부보기</a>
+              <span class="card">파일(file)</span>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="pg01"><a href="#">다음 목록(30개)</a></div>
+        </div>
+        <div class="rightA">
+          <dl class="lc03">
+            <dt>기술계층(하위)</dt>
+            <dd>
+              <ul>
+                <li>
+                  <dl>
+                    <dt><a href="#">특별접 전문</a></dt>
+                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>
+                <li>
+                  <dl>
+                    <dt><a href="#">특별법 발의과정</a></dt>
+                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>
+                <li>
+                  <dl>
+                    <dt><a href="#">특별법 제정 국회 현장사진</a></dt>
+                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>
+                <li>
+                  <dl>
+                    <dt><a href="#">특별법 제정 국회 현장사진</a></dt>
+                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
