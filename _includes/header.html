@@ -2,7 +2,7 @@
   <a href="#main-content">콘텐츠 바로가기</a>
 </div>
 <div id="seoul-common-gnb"></div>
-<header>
+<header{% if include.keyword %} class="searchMode"{% endif %}>
   <div class="inner">
     <div class="lg01"><a href="/">{{ site.title }}</a></div>
     <nav>
@@ -20,7 +20,7 @@
     <form class="cf01" action="" method="post">
       <fieldset>
       <label for="search_query">검색어</label>
-      <input type="text" name="query" id="search_query"/>
+      <input type="text" name="query" id="search_query"{% if include.keyword %} value="{{ include.keyword }}"{% endif %} />
       <button class="btn01">검색</button>
       <a class="btn01 btn01_01" href="#">상세검색</a>
       <a class="btn01 btn01_02" href="#"><i class="xi-close"></i>닫기</a>

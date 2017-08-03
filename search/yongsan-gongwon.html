@@ -1,0 +1,112 @@
+---
+layout: page
+keyword: 용산공원
+---
+
+{% comment %} 시리즈 + 파일 + 아이템 배열 합치기!! {% endcomment %}
+
+{% assign results = "" | split: "" %}
+{% for ser in site.data.series %}
+  {% assign results = results | push: ser %}
+{% endfor %}
+{% for fil in site.data.file %}
+  {% assign results = results | push: fil %}
+{% endfor %}
+{% for ite in site.data.item %}
+  {% assign results = results | push: ite %}
+{% endfor %}
+
+
+
+<div class="fc04" id="main-content">
+  <div class="inner">
+    <div class="TopA">
+      <div class="td01 leftF"><i class="xi-search"></i> "<b>용산공원</b>"으로 검색한 결과값 <strong>35,800</strong></div>
+      <ul class="ng04 rightF">
+        <li>
+          <select id="filter_sort">
+            <option>제목순</option>
+            <option>년도순</option>
+          </select>
+        </li>
+        <li><a href="#">결과값 다운로드</a></li>
+        <li><a href="#">인쇄모드</a></li>
+        <li><a href="#">수집박스 저장</a></li>
+      </ul>
+    </div>
+    <div class="lowerA">
+      <div class="fc05">
+        <div class="leftA">
+          <form class="cf04">
+            <dl>
+              <dt>온라인 열람</dt>
+              <dd class="tkg01">
+                  <input type="checkbox" checked="checked" id="check01_01" name="check01"/><label for="check01_01">온라인 열람 가능 자료</label>
+              </dd>
+            </dl>
+            <dl>
+              <dt>기술계층</dt>
+              <dd class="tkg01">
+                  <input type="checkbox" id="check02_01" name="check02" checked="checked"/><label for="check02_01">레코드그룹(record Group)</label>
+                  <input type="checkbox" id="check02_02" name="check02"/><label for="check02_02">시리즈(series)</label>
+                  <input type="checkbox" id="check02_03" name="check02"/><label for="check02_03">파일(file)</label>
+                  <input type="checkbox" id="check02_04" name="check02"/><label for="check02_04">건(item)</label>
+              </dd>
+            </dl>
+            <dl>
+              <dt>기록형태</dt>
+              <dd class="tkg01">
+                  <input type="checkbox" id="check03_01" name="check03" checked="checked"/><label for="check03_01">종이문서</label>
+                  <input type="checkbox" id="check03_02" name="check03"/><label for="check03_02">사진, 필름</label>
+                  <input type="checkbox" id="check03_03" name="check03"/><label for="check03_03">하드디스크, USB</label>
+                  <input type="checkbox" id="check03_04" name="check03"/><label for="check03_04">도면</label>
+                  <input type="checkbox" id="check03_05" name="check03"/><label for="check03_05">마이크로필름</label>
+              </dd>
+            </dl>
+            <dl>
+              <dt>전자파일 포멧</dt>
+              <dd class="tkg01">
+                  <input type="checkbox" id="check04_01" name="check04" checked="checked"/><label for="check04_01">워드(HWP)</label>
+                  <input type="checkbox" id="check04_02" name="check04"/><label for="check04_02">PDF</label>
+                  <input type="checkbox" id="check04_03" name="check04"/><label for="check04_03">슬라이드(PPT, PPTX)</label>
+                  <input type="checkbox" id="check04_04" name="check04"/><label for="check04_04">엑셀(XLS, CSV)</label>
+              </dd>
+            </dl>
+          </form>
+        </div>
+        <div class="rightA">
+          <div class="ng05">
+            <dl>
+              <dt>검색필터 :</dt>
+              <dd>
+                <a href="#">디지털 원문 직접 제공<i class="xi-close"></i></a>
+                <a href="#">단위과제카드<i class="xi-close"></i></a>
+                <a href="#">마이크로필름<i class="xi-close"></i></a>
+                <a href="#">워드(HWP)<i class="xi-close"></i></a>
+              </dd>
+            </dl>
+            <div class="tkg01">
+                <input type="checkbox" id="check_filter" name="check_filter" checked="checked"/><label for="check_filter">온라인 열람 가능 자료만 보기</label>
+            </div>
+          </div>
+          <ul class="lc02">
+            {% for result in results %}
+              <li>
+                <dl>
+                  <dt><a href="#">{{ result.title }}</a></dt>
+                  <dd>생산년도 : {{ result.created_year }}</dd>
+                </dl>
+                <a class="desc" href="#">세부보기</a>
+                <span class="card">{{ result.level_of_description }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+          <div class="pg01"><a href="#">다음 목록(30개)</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
