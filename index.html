@@ -1,11 +1,14 @@
 ---
 layout: page
+search:
+  keyword: 용산공원
+  link: /search/yongsan-gongwon/
 ---
 
 <div class="fc01" id="main-content">
   <div class="inner">
     <!-- Main search box -->
-    <form class="cf02" action="" method="post">
+    <form class="cf02">
       <p>서울기록원은<br/>
       <b>서울의 과거, 현재 기록</b>을 보관하고 있습니다.<br/>
       <b>검색해서 기록에 접근</b>하세요.</p>
@@ -16,8 +19,8 @@ layout: page
           <option value="1">기록에서 검색하기</option>
         </select>
         <label for="search_query">검색어</label>
-        <input type="text" name="query" id="search_query"/>
-        <button><a href="http://sda.slowalk.net/search/yongsan-gongwon/">기록에서 검색</a></button>
+        <input type="text" name="query" id="search_query" value="{{ page.search.keyword }}"/>
+        <button><a href="{{ page.search.link }}">기록에서 검색</a></button>
       </fieldset>
     </form>
     <!-- //Main search box -->
