@@ -1,23 +1,29 @@
 ---
 # level 2
 
-- id: 1
+- record-group-id: 4
+  id: 1
   title: 도시계획(서브-레코드)
   level_of_description: 서브-레코드
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292048
+  component_presentation_option:unvalid
 
-- id: 2
+- record-group-id: 4
+  id: 2
   title: 주택관련부서(서브-레코드)
   level_of_description: 서브-레코드
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 주택관련 기록이다. 
   Identifier: 10292049
+  component_presentation_option:unvalid
 
-- id: 3
+- record-group-id: 4
+  id: 3
   title: 부동산(서브-레코드)
   level_of_description: 서브-레코드
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 부동산관련 기록이다.
   Identifier: 10292050
+  component_presentation_option:unvalid

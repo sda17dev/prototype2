@@ -1,51 +1,65 @@
 ---
 # level 3
 
-- id: 1
+- sub-record-group-id: 1
+  id: 1
   title: 새로운용산공원조성(시리즈)
   level_of_description: 시리즈
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292048
+  component_presentation_option:unvalid
 
-- id: 2
+- sub-record-group-id: 1
+  id: 2
   title: 남산한옥마을조성(시리즈)
   level_of_description: 시리즈
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292049
+  component_presentation_option:unvalid
 
-- id: 3
+- sub-record-group-id: 1
+  id: 3
   title: 성수대교(시리즈)
   level_of_description: 시리즈
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292050
+  component_presentation_option:unvalid
 
-- id: 4
+- sub-record-group-id: 1
+  id: 4
   title: 내부순환도로(시리즈)
   level_of_description: 시리즈
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292051
+  component_presentation_option:unvalid
 
-- id: 5
+- sub-record-group-id: 1
+  id: 5
   title: 올림픽아파트
   level_of_description: 시리즈
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292052
+  component_presentation_option:unvalid
 
-- id: 6
+- sub-record-group-id: 1
+  id: 6
   title: 시민아파트
   level_of_description: 시리즈
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292053
+  component_presentation_option:valid
 
-- id: 6
+- sub-record-group-id: 1
+  id: 6
   title: 올림픽경기장
   level_of_description: 시리즈
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292054
+  component_presentation_option:valid
