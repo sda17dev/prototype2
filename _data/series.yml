@@ -26,7 +26,7 @@
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292050
-  component_presentation_option:unvalid
+  component_presentation_option: unvalid
 
 - sub-record-group-id: 1
   id: 4
@@ -35,7 +35,7 @@
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292051
-  component_presentation_option:unvalid
+  component_presentation_option: unvalid
 
 - sub-record-group-id: 1
   id: 5
@@ -44,7 +44,7 @@
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292052
-  component_presentation_option:unvalid
+  component_presentation_option: unvalid
 
 - sub-record-group-id: 1
   id: 6
@@ -53,7 +53,7 @@
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292053
-  component_presentation_option:valid
+  component_presentation_option: valid
 
 - sub-record-group-id: 1
   id: 6
@@ -62,4 +62,4 @@
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292054
-  component_presentation_option:valid
+  component_presentation_option: valid
