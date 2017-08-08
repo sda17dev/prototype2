@@ -1,16 +1,13 @@
 ---
 
+- title: 기록찾기
+  url: /browse
+
 - title: 검색결과_용산공원
   url: /search/yongsan-gongwon
 
-- title: 검색결과_용산공원(시리즈)
+- title: 검색결과_용산공원수집기록
   url: /series/2
-
-- title: 기록탐색
-  url: /browse/
-
-- title: 수집박스_즐겨찾기
-  url: /collection-box/favorites/
 
 - title: 리서치 가이드
   url: /research-guides/

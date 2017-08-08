@@ -1,6 +1,9 @@
 ---
 
-- title: 기록 탐색
-  url: /browse/
+- title: 서울기록원
+  url: /about/seoul-metropolitan-archive/
 - title: 소개 및 안내
   url: /about/
+- title: 뉴스
+  url: /article/  
+
