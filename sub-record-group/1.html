@@ -37,7 +37,7 @@ selected: 도시계획(서브-레코드)
             {% for set in site.data.series %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
-                <dt><a href="#">{{ set.title }}</a></dt>
+                <dt><a href="/series/1">{{ set.title }}</a></dt>
                 <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
               </dl>
               <a class="desc" href="#">세부보기</a>
@@ -55,7 +55,7 @@ selected: 도시계획(서브-레코드)
               {% for set in site.data.files %}
                 <li>
                   <dl>
-                    <dt><a href="#">{{ set.title }}</a></dt>
+                    <dt><a href="/file/1">{{ set.title }}</a></dt>
                     <dd>설명 : {{ set.description }}</dd>
                   </dl>
                   <a class="desc" href="#">세부보기</a>

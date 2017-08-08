@@ -1,0 +1,68 @@
+---
+layout: page
+search_result_count: 3
+hierachy:
+selected: 탐색
+---
+
+
+  <div class="inner">
+    <div class="TopA">
+      <ul class="ng06">
+        <li class="home"><i class="xi-home-o"></i><a href="#">홈</a></li>
+        <li class="current"><a href="#">{{ page.selected }}</a></li>
+        <!--li><a href="/search/yongsan-gongwon">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li-->
+      </ul>
+    </div>
+    <div class="lowerA">
+      <dl class="ng07">
+        <dt>현재위치 :</dt>
+        <dd>
+          <ul>
+            <li class="home"><i class="xi-home current"></i><a href="#">{{ page.selected }}</a></li>
+          </ul>
+        </dd>
+      </dl>
+
+      <dl class="th01">
+        <dt><h1>{{ page.selected }}</h1></dt>
+      </dl>
+
+      <div class="fc06">
+        <div class="leftA">
+          <ul class="lc02">
+            {% for set in site.data.record-groups %}
+            <li{% if forloop.first == true %} class="selected"{% endif %}>
+              <dl>
+                <dt><a href="/record-group/1">{{ set.title }}</a></dt>
+                <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
+              </dl>
+              <a class="desc" href="#">세부보기</a>
+              <span class="card">{{ set.level_of_description }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="pg01"><a href="#">최종 페이지입니다. </a></div>
+        </div>
+        <div class="rightA">
+          <dl class="lc03">
+            <dt>기술계층(하위)</dt>
+            <dd>
+              <ul>
+              {% for set in site.data.sub-record-groups %}
+                <li>
+                  <dl>
+                    <dt><a href="/sub-record-group/1">{{ set.title }}</a></dt>
+                    <dd>설명 : {{ set.description }}</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>
+              {% endfor %}
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
