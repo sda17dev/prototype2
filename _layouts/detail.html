@@ -31,7 +31,7 @@ layout: page
           </dd>
         </dl>
         <dl class="tc02">
-          <dt>해당되는 기록은 비공개자료입니다.</dt>
+          <dt>해당되는 기록은 공개자료입니다.</dt>
           <dd>
             <a href="#">온라인 열람 편의 제공 안내</a>
             <ol>
@@ -48,16 +48,8 @@ layout: page
             <dd>{{ node.title }}</dd>
           </dl>
           <dl>
-            <dt>공개유무</dt>
-            <dd>비공개 <span style="color: red; font-size: 80%;">(레코드그룹에 필드 없음)</span></dd>
-          </dl>
-          <dl>
             <dt>기술계층</dt>
             <dd>{{ node.level_of_description }}</dd>
-          </dl>
-          <dl>
-            <dt>생산자</dt>
-            <dd>서울특별시 본청 > 도시계획국 > 도시계획과 > 용산공원 전략팀 <span style="color: red; font-size: 80%;">(레코드그룹에 필드 없음)</span></dd>
           </dl>
           <dl>
             <dt>생산년도</dt>
@@ -74,14 +66,11 @@ layout: page
         </div>
 
         <dl class="ng07">
-          <dt>현재위치 :</dt>
+          <dt>자료맥락 :</dt>
           <dd>
             <ul>
-              <li class="home"><i class="xi-home"></i><a href="#">Hierarchy 1</a></li>
-              <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy 2</a></li>
-              <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy 3</a></li>
-              <li class="d3"><i class="xi-tab"></i><a href="#">(RG)새로운 용산공원 조성방안 마련</a></li>
-              <li class="d4 current"><i class="xi-tab"></i><a href="#">용산공원 특별법 제정관련</a></li>
+              <li class="home"><i class="xi-home"></i><a href="/browse">전체 이관된 기록 보기</a></li>
+              <li class="d1 current"><i class="xi-tab"></i><a href="/record-group/1">{{ node.title }}</a></li>
               <li><span style="color: red; font-size: 80%;">(추가 작업 필요)</span></li>
             </ul>
           </dd>
