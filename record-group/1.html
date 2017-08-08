@@ -43,41 +43,22 @@ selected: 전자행정문서-RMS(레코드그룹)
             </li>
             {% endfor %}
           </ul>
-          <div class="pg01"><a href="#">다음 목록(30개)</a></div>
+          <div class="pg01"><a href="#">최종 페이지입니다. </a></div>
         </div>
         <div class="rightA">
           <dl class="lc03">
             <dt>기술계층(하위)</dt>
             <dd>
               <ul>
+              {% for set in site.data.series %}
                 <li>
                   <dl>
-                    <dt><a href="#">특별접 전문</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                    <dt><a href="#">{{ set.title }}</a></dt>
+                    <dd>설명 : {{ set.description }}</dd>
                   </dl>
                   <a class="desc" href="#">세부보기</a>
                 </li>
-                <li>
-                  <dl>
-                    <dt><a href="#">특별법 발의과정</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
-                  </dl>
-                  <a class="desc" href="#">세부보기</a>
-                </li>
-                <li>
-                  <dl>
-                    <dt><a href="#">특별법 제정 국회 현장사진</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
-                  </dl>
-                  <a class="desc" href="#">세부보기</a>
-                </li>
-                <li>
-                  <dl>
-                    <dt><a href="#">특별법 제정 국회 현장사진</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
-                  </dl>
-                  <a class="desc" href="#">세부보기</a>
-                </li>
+              {% endfor %}
               </ul>
             </dd>
           </dl>
