@@ -32,7 +32,7 @@ selected: 전자행정문서-RMS(레코드그룹)
       <div class="fc06">
         <div class="leftA">
           <ul class="lc02">
-            {% for set in site.data.record-groups %}
+            {% for set in site.data.sub-record-groups %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
                 <dt><a href="#">{{ set.title }}</a></dt>
