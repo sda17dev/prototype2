@@ -36,7 +36,7 @@ selected: 새로운용산공원조성(시리즈)
       <div class="fc06">
         <div class="leftA">
           <ul class="lc02">
-            {% for set in site.data.files %}
+            {% for set in site.data.sub-series %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
                 <dt><a href="/file/1">{{ set.title }}</a></dt>
@@ -54,7 +54,7 @@ selected: 새로운용산공원조성(시리즈)
             <dt>기술계층(하위)</dt>
             <dd>
               <ul>
-                {% for set in site.data.items %}
+                {% for set in site.data.files %}
                 <li>
                   <dl>
                     <dt><a href="/item/1">{{ set.title }}</a></dt>
