@@ -4,7 +4,6 @@ search_result_count: 12
 hierachy:
   first: 전자행정문서-RMS(레코드그룹)
   second: 도시계획(서브-레코드)
-  third: 새로운용산공원조성(시리즈)
 selected: 새로운용산공원조성(시리즈)
 ---
 
@@ -14,7 +13,7 @@ selected: 새로운용산공원조성(시리즈)
       <ul class="ng06">
         <li class="home"><i class="xi-home-o"></i><a href="#">홈</a></li>
         <li><a href="#">검색</a></li>
-        <li><a href="/sda-prototype/html/01_search_our_record.html">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li>
+        <li><a href="/search/yongsan-gongwon.html">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li>
         <li class="current"><a href="#">{{ page.selected }}</a></li>
       </ul>
     </div>
@@ -25,8 +24,7 @@ selected: 새로운용산공원조성(시리즈)
           <ul>
             <li class="home"><i class="xi-home"></i><a href="#">{{ page.hierachy.first }}</a></li>
             <li class="d1"><i class="xi-tab"></i><a href="#">{{ page.hierachy.second }}</a></li>
-            <li class="d2"><i class="xi-tab"></i><a href="#">{{ page.hierachy.third }}</a></li>
-            <li class="d3 current"><i class="xi-tab"></i><a href="#">{{ page.selected }}</a></li>
+            <li class="d2 current"><i class="xi-tab"></i><a href="#">{{ page.selected}}</a></li>
           </ul>
         </dd>
       </dl>
