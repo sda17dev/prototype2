@@ -5,7 +5,8 @@ hierachy:
   first: 전자행정문서-RMS(레코드그룹)
   second: 도시계획(서브-레코드)
   third : 새로운용산공원조성(시리즈)
-selected: 용산공원조성관련(서브-시리즈)
+  forth : 용산공원조성관련(서브-시리즈)
+selected: 용산공원 특별법 제정관련(파일)
 ---
 
 
@@ -13,10 +14,11 @@ selected: 용산공원조성관련(서브-시리즈)
     <div class="TopA">
       <ul class="ng06">
         <li class="home"><i class="xi-home-o"></i><a href="#">홈</a></li>
-        <li><a href="/browse">탐색</a></li>
-        <li><a href="/record-group/1">전자행정문서-RMS</a></li> 
-        <li><a href="/sub-record-group/1">도시계획</a></li>
-        <li><a href="/sires/1">새로운용산공원조성</a></li>                      
+        <li><a href="#">탐색</a></li>
+        <li><a href="#">전자행정문서-RMS</a></li> 
+        <li><a href="#">도시계획</a></li>
+        <li><a href="#">새로운용산공원조성</a></li>
+        <li><a href="#">용산공원조성관련</a></li>                               
         <!--li><a href="/search/yongsan-gongwon">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li-->
         <li class="current"><a href="#">{{ page.selected }}</a></li>
       </ul>
@@ -29,7 +31,8 @@ selected: 용산공원조성관련(서브-시리즈)
             <li class="home"><i class="xi-home"></i><a href="/record-group/1">{{ page.hierachy.first }}</a></li>
             <li class="d1"><i class="xi-tab"></i><a href="/sub-record-group/1">{{ page.hierachy.second }}</a></li>
             <li class="d2"><i class="xi-tab"></i><a href="/series/1">{{ page.hierachy.third }}</a></li>
-            <li class="d3 current"><i class="xi-tab"></i><a href="/sub-series/1">{{ page.selected}}</a></li>
+            <li class="d3"><i class="xi-tab"></i><a href="/sub-series/1">{{ page.hierachy.forth }}</a></li>            
+            <li class="d4 current"><i class="xi-tab"></i><a href="/file/1">{{ page.selected}}</a></li>
           </ul>
         </dd>
       </dl>
@@ -41,7 +44,7 @@ selected: 용산공원조성관련(서브-시리즈)
       <div class="fc06">
         <div class="leftA">
           <ul class="lc02">
-            {% for set in site.data.files %}
+            {% for set in site.data.items %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
                 <dt><a href="/file/1">{{ set.title }}</a></dt>
@@ -55,22 +58,6 @@ selected: 용산공원조성관련(서브-시리즈)
           <div class="pg01"><a href="#">다음 목록(30개)</a></div>
         </div>
         <div class="rightA">
-          <dl class="lc03">
-            <dt>기술계층(하위)</dt>
-            <dd>
-              <ul>
-                {% for set in site.data.items %}
-                <li>
-                  <dl>
-                    <dt><a href="/item/1">{{ set.title }}</a></dt>
-                    <dd>설명 : {{ set.description }}</dd>
-                  </dl>
-                  <a class="desc" href="#">세부보기</a>
-                </li>
-                {% endfor %}
-              </ul>
-            </dd>
-          </dl>
         </div>
       </div>
     </div>
