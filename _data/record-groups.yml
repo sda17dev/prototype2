@@ -1,7 +1,16 @@
 ---
 # level 1
 
+
 - id: 1
+  title: 전자행정문서-RMS(레코드그룹)
+  level_of_description: 레코드그룹
+  created_year: 1995 - 2000 
+  description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
+  Identifier: 10292044
+  component_presentation_option: unvalid
+
+- id: 2
   title: 용산공원수집기록(레코드그룹)
   level_of_description: 레코드그룹
   created_year: 2016 - 1980
@@ -9,7 +18,7 @@
   Identifier: 10292039
   component_presentation_option: valid
 
-- id: 2
+- id: 3
   title: 청도문서(레코드그룹)
   level_of_description: 레코드그룹
   created_year: 1950 - 1980 
@@ -17,18 +26,10 @@
   Identifier: 10292040
   component_presentation_option: valid
 
-- id: 3
+- id: 4
   title: 시정행정사진 - 사진아카이브(레코드그룹)
   level_of_description: 레코드그룹
   created_year: 1950 - 1980 
   description: 서울특별시가 1950년부터 시장 공보실 중심으로 찍어온 사진기록이다. 필름류 및 사진 원본은 역사박물관이 보존하고 있으며, 해당기록을 2018년까지 사진아카이브로 서비스를 해 오다가 2018년에 영구보존시스템으로 이관했다. 
   Identifier: 10292043
-  component_presentation_option: unvalid
-
-- id: 4
-  title: 전자행정문서-RMS(레코드그룹)
-  level_of_description: 레코드그룹
-  created_year: 1995 - 2000 
-  description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
-  Identifier: 10292044
   component_presentation_option: unvalid

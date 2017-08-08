@@ -1,7 +1,7 @@
 ---
 # level 2
 
-- record-group-id: 4
+- record-group-id: 1
   id: 1
   title: 도시계획(서브-레코드그룹)
   level_of_description: 서브-레코드그룹
@@ -10,7 +10,7 @@
   Identifier: 10292048
   component_presentation_option: unvalid
 
-- record-group-id: 4
+- record-group-id: 1
   id: 2
   title: 주택관련부서(서브-레코드그룹)
   level_of_description: 서브-레코드그룹
@@ -19,7 +19,7 @@
   Identifier: 10292049
   component_presentation_option: unvalid
 
-- record-group-id: 4
+- record-group-id: 1
   id: 3
   title: 부동산(서브-레코드그룹)
   level_of_description: 서브-레코드그룹
