@@ -35,11 +35,11 @@ selected: 전자행정문서-RMS(레코드그룹)
             {% for set in site.data.sub-record-groups %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
-                <dt><a href="#">{{ set.title }}</a></dt>
+                <dt><a href="/sub-record-group/1">{{ set.title }}</a></dt>
                 <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
               </dl>
               <a class="desc" href="#">세부보기</a>
-              <span class="card">파일(file)</span>
+              <span class="card">{{ set.level_of_description }}</span>
             </li>
             {% endfor %}
           </ul>
@@ -53,7 +53,7 @@ selected: 전자행정문서-RMS(레코드그룹)
               {% for set in site.data.series %}
                 <li>
                   <dl>
-                    <dt><a href="#">{{ set.title }}</a></dt>
+                    <dt><a href="/series/1">{{ set.title }}</a></dt>
                     <dd>설명 : {{ set.description }}</dd>
                   </dl>
                   <a class="desc" href="#">세부보기</a>
