@@ -332,3 +332,7 @@ button.btn01{height:63px}
 #seoul-gnb-plugin .seoul-gnb-news {
 	left: 135px !important;
 }
+
+#site-footer {
+  margin-top: 30px;
+}
