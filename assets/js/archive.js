@@ -8,6 +8,7 @@ var $ = jQuery;
 $(document).ready(function() {
 		
 	//폼요소 스타일링
+  $(".cf01 select").selectmenu();
 	$(".cf02 select").selectmenu();
 	$(".ng04 select").selectmenu();
 	$(".tkg01").buttonset();
