@@ -90,7 +90,7 @@ button.btn01{height:63px}
 
 .cf01{text-align:right}
 .cf01 label{display:none}
-.cf01 .ui-selectmenu-button{border-radius:0;border:none;background:#fff;min-width:30px;font-size:18px;color:#212121;vertical-align:top;margin-right:10px;position: absolute;margin-left: -40px;margin-top: 5px;}
+.cf01 .ui-selectmenu-button{border-radius:0;border:none;background:#fff;min-width:30px;font-size:18px;color:#212121;vertical-align:top;margin-right:10px;position: absolute;margin-left: -40px;margin-top: 5px;width: 30px !important;}
 .cf01 .ui-selectmenu-button span.ui-icon{background:url(../images/bl_arr01.jpg) no-repeat center center; }
 .cf01 .ui-selectmenu-button span.ui-selectmenu-text{padding:12px 20px 13px; visibility: hidden;}
 .cf01 input{height:59px;width:57%;border:2px solid #e6e6e6;text-indent:20px;font-size:24px;color:#212121}
