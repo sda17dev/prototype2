@@ -1,0 +1,158 @@
+---
+#WEB-홈
+
+## 이메일수집
+
+- touchdown - timestamp: yyyy.mm.dd hh-mm-ss
+  id: email@email.com
+  privacypolicy: agree / disagree
+  user barcode: 98099900990
+
+## 회원
+
+- signup - timestamp: yyyy.mm.dd hh-mm-ss
+  signup - recentlogin - timestamp: yyyy.mm.dd hh-mm-ss
+  user-id: email@email.com
+  user-level: guest, user, admin, super-admin
+  profile image: 3830.jpg
+  user-persona: 4types
+  password: encrypted
+  privacypolicy: agree / disagree
+  user barcode: 98099900990
+
+## 사진아카이브 - 사진(아이템)
+
+- timestamp: yyyy.mm.dd hh-mm-ss
+  id: 00000
+  title:  text
+  manage-number: 000000000000000000
+  type: film
+  produce-date: yyyy.mm.dd
+  region: region-name
+  description: textarea
+  keyword: keyword1, keyword2, keyword3
+  copyright-by: owner institute name
+  creative commons license: 6 types
+  kogl-license: 4types
+  촬영일자: yyyy-mm-dd
+  relation with: 00000,00000,00000,00000,00000
+
+
+## 컬렉션 - 사진 컬렉션
+
+- timestamp: yyyy.mm.dd hh-mm-ss
+  id: 000
+  title:  text
+  description: textarea
+  collection-lists: 00000,00000,00000,00000,00000
+
+## 컬렉션 - 사용자가 공개한 즐겨찾기 목록
+
+- timestamp: yyyy.mm.dd hh-mm-ss
+  id: 000
+  title:  text
+  description: textarea
+  collection-lists: 00000,00000,00000,00000,00000  
+  creator: user-id
+
+
+#카탈로그-Engine ERD
+
+## record-groups.yml
+## sub-record-groups.yml
+## siries.yml
+## sub-serires.yml
+## files.yml
+## items.yml
+
+
+#웹사이트
+
+##검색결과
+
+##아티클
+
+- timestamp: yyyy.mm.dd hh-mm-ss
+  id: 000000000
+  title:  text
+  type: film
+  produce-date: yyyy.mm.dd
+  thumnail: 3830.jpg,3830.jpg,3830.jpg
+  description: textarea
+  article-tag: keyword1, keyword2, keyword3
+  written-by: user-id
+  creative commons license: 6 types
+  category : notice, dailywork, events, news
+  selected-record-id : UUID-record
+  recomend others: 00000,00000,00000,00000,00000
+
+##유저별가이드
+
+##리서치가이드
+
+##요청-일반문의
+
+##요청-오류신고
+
+##개발자를 위한 안내
+
+
+#사용자(User)
+
+##수집박스
+
+##회원정보
+
+##즐겨찾기
+
+##다운로드기록
+
+##사용자공개컬렉션
+
+
+#관리자(Admin)
+
+##통계
+
+관리자는 통계 페이지에서 SDA-WEB의 다양한 통계 숫자를 확인한다. 해당통계
+기록관련 통계
+SDA-ENGINE을 통해 동기화된 시리즈 N건
+SDA-ENGINE을 통해 동기화된 서브 시리즈 N건
+SDA-ENGINE을 통해 동기화된 파일 N건
+SDA-ENGINE을 통해 동기화된 아이템 N건
+SDA-ENGINE을 통해 최근 변경된 항목N건
+
+
+검색엔진 관련 통계
+검색엔진 쿼리
+검색엔진 통계
+사이트 입출입 (GA)
+사이트방문 및 유입
+사이트이탈
+재방문 케이스
+다운로드
+다운로드 항목 리스트 (분류별)
+외부공유
+외부 링크 리퍼러
+회원통계
+회원가입 및 로그인 통계
+관리자업무 
+오류수정요청 N건
+일반문의 N건
+
+
+##웹사이트 메인관리
+
+##관리자관리
+
+
+
+
+
+
+
+
+
+
+
+
