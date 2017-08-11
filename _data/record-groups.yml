@@ -24,7 +24,7 @@
   created_year: 1950 - 1980 
   description: 서울특별시가 1950년부터 남겨온 영구기록 32,459권, 준영구 기록 26,805권의 문서(대장포함), 카드, 도면을 포함한 기록이다. 
   Identifier: 10292040
-  component_presentation_option: valid
+  component_presentation_option: unvalid
 
 - id: 4
   title: 시정행정사진 - 사진아카이브(레코드그룹)

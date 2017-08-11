@@ -6,8 +6,11 @@
 - title: 검색결과_용산공원
   url: /search/yongsan-gongwon
 
-- title: 검색결과_용산공원수집기록
-  url: /series/2
+- title: 기록찾기-전자행정문서
+  url: /record-group/1
+
+- title: 기록찾기_용산공원수집기록
+  url: /record-group/5
 
 - title: 리서치 가이드
   url: /research-guides/

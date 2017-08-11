@@ -3,8 +3,7 @@ layout: page
 search_result_count: 35,800
 hierachy:
   first: 용산공원수집기록(레코드그룹)
-  second: 국내 수집기록(서브-레코드그룹)
-selected: 구한물(조선)-남산과 한강사이의 삶(시리즈)
+selected: 구한말(조선)-남산과 한강사이의 삶(시리즈)
 ---
 
 
@@ -12,8 +11,9 @@ selected: 구한물(조선)-남산과 한강사이의 삶(시리즈)
     <div class="TopA">
       <ul class="ng06">
         <li class="home"><i class="xi-home-o"></i><a href="#">홈</a></li>
-        <li><a href="#">검색</a></li>
-        <li><a href="/sda-prototype/html/01_search_our_record.html">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li>
+        <li><a href="/browse">탐색</a></li>
+        <li><a href="/record-group/5">용산공원수집기록(레코드그룹)</a></li>        
+        <!--li><a href="/sda-prototype/html/01_search_our_record.html">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li-->
         <li class="current"><a href="#">{{ page.selected }}</a></li>
       </ul>
     </div>
@@ -22,8 +22,7 @@ selected: 구한물(조선)-남산과 한강사이의 삶(시리즈)
         <dt>현재위치 :</dt>
         <dd>
           <ul>
-            <li class="home"><i class="xi-home"></i><a href="#">{{ page.hierachy.first }}</a></li>
-            <li class="d1"><i class="xi-tab"></i><a href="#">{{ page.hierachy.second }}</a></li>
+            <li class="home"><i class="xi-home"></i><a href="/record-group/5">{{ page.hierachy.first }}</a></li>
             <li class="d2 current"><i class="xi-tab"></i><a href="#">{{ page.selected }}</a></li>
           </ul>
         </dd>
@@ -36,18 +35,18 @@ selected: 구한물(조선)-남산과 한강사이의 삶(시리즈)
       <div class="fc06">
         <div class="leftA">
           <ul class="lc02">
-            {% for set in site.data.series %}
+            {% for set in site.data.series-yongsan-manuscript %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
                 <dt><a href="#">{{ set.title }}</a></dt>
                 <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
               </dl>
               <a class="desc" href="#">세부보기</a>
-              <span class="card">파일(file)</span>
+              <span class="card">{{ set.level_of_description }}</span>
             </li>
             {% endfor %}
           </ul>
-          <div class="pg01"><a href="#">다음 목록(30개)</a></div>
+          <div class="pg01"><a href="#">최종페이지입니다.</a></div>
         </div>
         <div class="rightA">
           <dl class="lc03">
@@ -56,32 +55,53 @@ selected: 구한물(조선)-남산과 한강사이의 삶(시리즈)
               <ul>
                 <li>
                   <dl>
-                    <dt><a href="#">특별접 전문</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                    <dt><a href="#">동국여도</a></dt>
+                    <dd>설명 : 경강부임전도(19세기 전반) 47.0 x 123.6㎝ _ 서울대학교 규장각 소장</dd>
                   </dl>
                   <a class="desc" href="#">세부보기</a>
                 </li>
                 <li>
                   <dl>
-                    <dt><a href="#">특별법 발의과정</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                    <dt><a href="#">한성전도(1799) _ 영남대학교박물관 소장</a></dt>
+                    <dd>설명 : 한성전도에 그려진 한강에는 여러 척의 배가, 강변에는 가옥들이 표현되어 있다. 특히 용산 일대에는 만초천을 비롯하여 이태원, 전생서, 와서가 있었음을 확인할 수 있다. 동작진, 서빙고, 한강진 주변에 배들이 많은 것을 보아 이곳들이 큰 포구로서 물류의 중심이었다.</dd>
                   </dl>
                   <a class="desc" href="#">세부보기</a>
                 </li>
                 <li>
                   <dl>
-                    <dt><a href="#">특별법 제정 국회 현장사진</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                    <dt><a href="#">석재운반 서울시립대학교박물관 소장</a></dt>
+                    <dd>설명 : 한강 물가의 인부들이 석재를 운반하는 모습이다. 큰 석재 운반은 남자 여러 명이 모여야 했다. 강 연안에 정박한 배에서는 큰 자갈도 실어 왔음이 확인된다.</dd>
                   </dl>
                   <a class="desc" href="#">세부보기</a>
                 </li>
                 <li>
                   <dl>
-                    <dt><a href="#">특별법 제정 국회 현장사진</a></dt>
-                    <dd>설명 : 특별법 전문의 내용을 확인할 수 있다.</dd>
+                    <dt><a href="#">용산포구에 하역된 목재들 _ 서울시립대학교박물관 소장</a></dt>
+                    <dd>설명 : 용산포구에 하역된 목재들 _ 서울시립대학교박물관 소장.jpg</dd>
                   </dl>
                   <a class="desc" href="#">세부보기</a>
                 </li>
+                <li>
+                  <dl>
+                    <dt><a href="#">구한말 용산포구의 모습</a></dt>
+                    <dd>설명 : 구한말 용산포구의 모습 _ 서울역사편찬원 소장.jpg</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>
+                <li>
+                  <dl>
+                    <dt><a href="#">용산의 한강변 겨울 빨래</a></dt>
+                    <dd>설명 : 용산의 한강변 겨울 빨래 _ 서울역사편찬원 소장.jpg</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>
+                <li>
+                  <dl>
+                    <dt><a href="#">황포돛단배가 떠 있는 용산나루(1892)</a></dt>
+                    <dd>설명 :  황포돛단배가 떠 있는 용산나루(1892)_ 서울역사편찬원 소장.jpg</dd>
+                  </dl>
+                  <a class="desc" href="#">세부보기</a>
+                </li>                                                
               </ul>
             </dd>
           </dl>
