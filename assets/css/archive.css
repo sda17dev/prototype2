@@ -219,7 +219,7 @@ button.btn01{height:63px}
 .ng05 .ui-buttonset.tkg01 label.ui-button.ui-state-active{background-image:url(../images/btn_check_on.jpg)}
 .ng05 .ui-buttonset.tkg01 .ui-button-text-only .ui-button-text{color:#666;padding-right:0}
 
-.ng06{margin-top:8px}
+.ng06{margin-top:11px; margin:15px;}
 .ng06 li{display:inline}
 .ng06 li:after{content:">";margin:0 0px 0 3px}
 .ng06 li.current:after{content:none;margin:0}
@@ -228,9 +228,11 @@ button.btn01{height:63px}
 .ng06 li.current a{font-weight:bold;border-bottom:1px solid #666}
 .ng06 li.current a:hover{text-decoration:none;border-color:#ff0000}
 
-.ng07{background-color:#f1f3f5;padding:20px;border-bottom:1px solid #b8b8b8;margin-bottom:30px}
+
+.ng07{background-color:#ffffff;padding:15px;border-top:10px solid #666;border-left:10px solid #666;border-right:10px solid #666}
+.ng07 h1{font-size:25px;color:#333;line-height:40px}
 .ng07 dt{float:left;line-height:32px}
-.ng07 dd{margin-left:80px}
+.ng07 dd{margin-left:20px}
 .ng07 li a{font-size:14px;line-height:32px}
 .ng07 li i{font-size:14px;margin-right:3px}
 .ng07 li.home i{background-color:#fff;border:1px solid #e6e6e6;padding:2px 2px;font-size:14px}
@@ -240,7 +242,7 @@ button.btn01{height:63px}
 .ng07 li.d4{margin-left:80px}
 .ng07 li.d5{margin-left:100px}
 .ng07 li.d6{margin-left:120px}
-.ng07 li.current a{font-weight:bold}
+.ng07 li.current a{font-size:16px; font-weight:bold}
 
 .ng08{overflow:hidden;margin-bottom:30px}
 .ng08 li{float:left;margin-right:10px}
@@ -330,7 +332,7 @@ button.btn01{height:63px}
 .th01{border-bottom:1px solid #b8b8b8;padding-bottom:20px;margin-bottom:30px;overflow:hidden}
 .th01 dt{float:left}
 .th01 dd{float:right}
-.th01 h1{font-size:30px;color:#333;line-height:40px}
+.th01 h1{font-size:25px;color:#333;line-height:40px}
 .th01 .rightF{float:right}
 .th01 li{float:left;margin-left:10px}
 .th01 li a{display:block;height:40px;line-height:40px;border:1px solid #cbcbcb;background-color:#e4e4e4;color:#212121;padding:0 20px;border-radius:3px}
