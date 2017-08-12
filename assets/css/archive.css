@@ -331,6 +331,14 @@ button.btn01{height:63px}
 .th01 dt{float:left}
 .th01 dd{float:right}
 .th01 h1{font-size:30px;color:#333;line-height:40px}
+.th01 .rightF{float:right}
+.th01 li{float:left;margin-left:10px}
+.th01 li a{display:block;height:40px;line-height:40px;border:1px solid #cbcbcb;background-color:#e4e4e4;color:#212121;padding:0 20px;border-radius:3px}
+.th01 li a:hover{text-decoration:none;background-color:#666;color:#fff}
+.th01 li a i{margin-right:5px;font-size:18px}
+.th01 .ui-selectmenu-button{border-radius:3px;border:1px solid #cbcbcb;background:#e4e4e4;min-width:130px;font-size:16px;color:#212121;vertical-align:top}
+.th01 .ui-selectmenu-button span.ui-icon{background:url(../images/bl_arr01.png) no-repeat center center;right:15px}
+.th01 .ui-selectmenu-button span.ui-selectmenu-text{padding:9px 20px 9px}
 
 #seoul-gnb-plugin .seoul-gnb-news {
 	left: 135px !important;
