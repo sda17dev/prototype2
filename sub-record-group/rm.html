@@ -3,7 +3,7 @@ layout: page
 search_result_count: 12
 hierachy:
   first: 전자행정문서-RMS(레코드그룹)
-selected: 도시계획(서브-레코드)
+selected: 도시계획(서브-레코드그룹)
 ---
 
 
@@ -17,35 +17,27 @@ selected: 도시계획(서브-레코드)
       </ul>
     </div>
     <div class="lowerA">
-      <dl class="ng07">
-        <dt>현재위치 :</dt>
-        <dd>
-          <ul>
-            <li class="home"><i class="xi-home"></i><a href="/record-group/rm">{{ page.hierachy.first }}</a></li>
-            <li class="d2 current"><i class="xi-tab"></i><a href="/sub-record-group/rm">{{ page.selected}}</a></li>
-          </ul>
-        </dd>
-      </dl>
-
-      <dl class="th01">
-        <dt><h1>{{ page.selected }} 에 포함된 </h1></dt>
-        <ul class="rightF">
-          <li><a href="#">결과값 다운로드</a></li>
-          <li><a href="#">인쇄모드</a></li>
-          <li><a href="/collection-box/favorites/">수집박스 저장</a></li>
-        </ul> 
-      </dl>
-
+     <dl class="ng07">
+            <h1>현재 보고 있는 위치</h1>
+          <dt></dt>
+          <dd>
+            <ul>
+              <li class="home current"><i class="xi-home"></i><a href="/record-group/yongsan">{{ page.hierachy.first }}</a></li>
+            </ul>  
+          </dd>
+          </br> 
+            <h1>현재 위치 아래에 있는 목록</h1>
+        </dl> 
       <div class="fc06">
         <div class="leftA">
           <ul class="lc02">
-            {% for set in site.data.series %}
+            {% for set in site.data.sub-record-groups %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
-                <dt><a href="/series/rm">{{ set.title }}</a></dt>
+                <dt><a href="/sub-record-group/rm">{{ set.title }}</a></dt>
                 <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
               </dl>
-              <a class="desc" href="/series/1">세부보기</a>
+              <a class="desc" href="/sub-record-group/1">세부보기</a>
               <span class="card">{{ set.level_of_description }}</span>
             </li>
             {% endfor %}
@@ -57,13 +49,13 @@ selected: 도시계획(서브-레코드)
             <dt>기술계층(하위)</dt>
             <dd>
               <ul>
-              {% for set in site.data.sub-series %}
+              {% for set in site.data.series %}
                 <li>
                   <dl>
-                    <dt><a href="/sub-series/rm">{{ set.title }}</a></dt>
+                    <dt><a href="/series/rm">{{ set.title }}</a></dt>
                     <dd>설명 : {{ set.description }}</dd>
                   </dl>
-                  <a class="desc" href="/sub-series/1">세부보기</a>
+                  <a class="desc" href="/series/1">세부보기</a>
                 </li>
                 <li>
                   <dl>

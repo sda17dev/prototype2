@@ -34,4 +34,12 @@
   level_of_description: 서브-레코드그룹
   created_year: 1995 - 2000 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시디자인관련 기록이다. 
-  component_presentation_option: unvalid  
+  component_presentation_option: unvalid
+
+- record-group-id: 1
+  id: 5
+  title: 주거복지(서브-레코드그룹)
+  level_of_description: 서브-레코드그룹
+  created_year: 1995 - 2000 
+  description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시디자인관련 기록이다. 
+  component_presentation_option: unvalid    

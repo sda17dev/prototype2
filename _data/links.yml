@@ -1,15 +1,15 @@
 ---
 
-- title: 기록찾기
+- title: 탐색
   url: /browse
 
 - title: 검색결과_용산공원
   url: /search/yongsan-gongwon
 
-- title: 기록찾기-전자행정문서
+- title: 탐색-전자행정문서
   url: /record-group/rm
 
-- title: 기록찾기_용산공원수집기록
+- title: 탐색_용산공원수집기록
   url: /record-group/yongsan
 
 - title: 리서치 가이드

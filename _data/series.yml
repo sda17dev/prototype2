@@ -63,3 +63,21 @@
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 건축관련분야다. 이하에 도시계획 관련 기록이다.
   Identifier: 10292054
   component_presentation_option: valid
+
+- record-group-id: 2
+  id: 7
+  title: 구한말(조선)_남산과 한강 사이에서의 삶(시리즈)
+  level_of_description: 시리즈
+  created_year: 1779 - 1890 
+  description: 용산공원수집팀이 직접 수집한 조선시대부터 현재까지의 용산에 대한 기록이다. 일본, 미국에서 현지조사를 통해 직접 수집한 기록이 포함된다.
+  Identifier: 10292048
+  component_presentation_option: valid
+
+- record-group-id: 2
+  id: 8
+  title: 일제시기_용산으로 밀려오는 일본군(시리즈)
+  level_of_description: 시리즈
+  created_year: 1779 - 1890 
+  description: 용산공원수집팀이 직접 수집한 조선시대부터 현재까지의 용산에 대한 기록이다. 일본, 미국에서 현지조사를 통해 직접 수집한 기록이 포함된다.
+  Identifier: 10292048
+  component_presentation_option: valid  

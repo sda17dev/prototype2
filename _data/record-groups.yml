@@ -5,7 +5,7 @@
 - id: 1
   title: 전자행정문서-RMS(레코드그룹)
   level_of_description: 레코드그룹
-  created_year: 1995 - 2000 
+  created_year: 1995 - 2000
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
   Identifier: 10292044
   component_presentation_option: unvalid
@@ -13,7 +13,7 @@
 - id: 2
   title: 용산공원수집기록(레코드그룹)
   level_of_description: 레코드그룹
-  created_year: 2016 - 1980
+  created_year: 2016 - 2018
   description: 용산공원조성 계획에 따라 용산공원수집팀에서 직접 수집한 행정, 민간, 미국(NARA), 일본에서 직접 수집한 기록이다. 
   Identifier: 10292039
   component_presentation_option: valid

@@ -4,7 +4,10 @@ search_result_count: 12
 hierachy:
   first: 전자행정문서-RMS(레코드그룹)
   second: 도시계획(서브-레코드그룹)
-selected: 새로운용산공원조성(시리즈)
+  third : 새로운용산공원조성(시리즈)
+  forth : 용산공원조성관련(서브-시리즈)
+  fifth : 용산공원 특별법 제정관련(파일)
+selected: 특별법 전문(아이템)
 ---
 
 
@@ -13,8 +16,12 @@ selected: 새로운용산공원조성(시리즈)
       <ul class="ng06">
         <li class="home"><i class="xi-home-o"></i><a href="/">홈</a></li>
         <li><a href="/browse">탐색</a></li>
-        <li><a href="/record-group/rm">{{ page.hierachy.first }}</a></li>
+        <li><a href="/record-group/rm">{{ page.hierachy.first }}</a></li> 
         <li><a href="/sub-record-group/rm">{{ page.hierachy.second }}</a></li>
+        <li><a href="/series/rm">{{ page.hierachy.third }}</a></li>
+        <li><a href="/sub-series/rm">{{ page.hierachy.forth }}</a></li>
+        <li><a href="/file/rm">{{ page.hierachy.fifth }}</a></li>                                         
+        <!--li><a href="/search/yongsan-gongwon">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li-->
         <li class="current"><a href="#">{{ page.selected }}</a></li>
       </ul>
     </div>
@@ -25,43 +32,35 @@ selected: 새로운용산공원조성(시리즈)
           <dd>
             <ul>
               <li class="home"><i class="xi-home"></i><a href="/record-group/rm">{{ page.hierachy.first }}</a></li>
-              <li class="d1 current"><i class="xi-tab"></i><a href="/sub-record-group/rm">{{ page.hierachy.second }}</a></li>
+              <li class="d1"><i class="xi-tab"></i><a href="/sub-record-group/rm">{{ page.hierachy.second }}</a></li>
+              <li class="d2"><i class="xi-tab"></i><a href="/series/rm">{{ page.hierachy.third }}</a></li>
+              <li class="d3"><i class="xi-tab"></i><a href="/sub-series/rm">{{ page.hierachy.forth }}</a></l>
+              <li class="d4 current"><i class="xi-tab"></i><a href="/file/rm">{{ page.hierachy.fifth }}</a></l>              
             </ul>  
           </dd>
           </br> 
             <h1>현재 위치 아래에 있는 목록</h1>
-        </dl>       
+        </dl>
       <div class="fc06">
         <div class="leftA">
           <ul class="lc02">
-            {% for set in site.data.series %}
+            {% for set in site.data.items %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
-                <dt><a href="/series/rm">{{ set.title }}</a></dt>
+                <dt><a href="/file/rm">{{ set.title }}</a></dt>
                 <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
               </dl>
-              <a class="desc" href="/series/4">세부보기</a>
+              <a class="desc" href="/file/1">세부보기</a>
               <span class="card">{{ set.level_of_description }}</span>
             </li>
             {% endfor %}
           </ul>
-          <div class="pg01"><a href="#">최종 페이지입니다.</a></div>
+          <div class="pg01"><a href="#">다음 목록(30개)</a></div>
         </div>
         <div class="rightA">
           <dl class="lc03">
             <dt>기술계층(하위)</dt>
-            <dd>
-              <ul>
-                {% for set in site.data.sub-series %}
-                <li>
-                  <dl>
-                    <dt><a href="/sub-series/rm">{{ set.title }}</a></dt>
-                    <dd>설명 : {{ set.description }}</dd>
-                  </dl>
-                  <a class="desc" href="/sub-series/1">세부보기</a>
-                </li>
-                {% endfor %}
-              </ul>
+            <dd> * 더 이상 하위 기술계층이 없습니다. 
             </dd>
           </dl>
         </div>
