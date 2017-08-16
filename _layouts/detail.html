@@ -29,9 +29,9 @@ layout: page
             <ul>
               <li class="home"><i class="xi-home"></i><a href="#">서울기록원</a></li>
               <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy1</a></li>
-              <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy2</a></li>
+              <!-- <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy2</a></li>
               <li class="d3"><i class="xi-tab"></i><a href="/#">Hierarchy3</a></li>
-              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li>
+              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li> -->
             </ul>
           </dd>
         </dl>
@@ -50,12 +50,24 @@ layout: page
           <li class="open"><a class="btn02" href="#">열람하기</a></li>
           <li class="down"><a class="btn02" href="#">전체 다운로드</a></li>
         </ul>
+          {% if type == 'series' and node.id == 7 %}
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="/assets/yongsan/01-1.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/01.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/02.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/03.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/04.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/05.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/06.jpg" alt=""></div>
+        </div>
+          {% else %}
         <div class="etc01" style="display:on">
           <a href="#" class="close"><i class="xi-close"></i></a>
           <div class="contents">
-            <iframe width="1230" height="788" src="https://sda17dev.github.io/sda-prototype/pdfjs/web/viewer.html?file=../../files/58dcc6df8f23d4.93817358.pdf" frameborder="0" allowfullscreen></iframe>
+            <iframe width="1230" height="788" src="//sda17dev.github.io/sda-prototype/pdfjs/web/viewer.html?file=../../files/58dcc6df8f23d4.93817358.pdf" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
+          {% endif %}
         {% endif %}
         <dl class="tc02">
           <dt>해당되는 기록은 공개자료입니다.</dt>
@@ -125,3 +137,27 @@ layout: page
     </div>
   </div>
   <!-- //서브 컨텐츠 영역 -->
+
+{% if type == 'series' and node.id == 7 %}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<script>
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3
+          }
+      }
+  });
+</script>
+{% endif %}

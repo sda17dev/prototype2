@@ -269,7 +269,7 @@ button.btn01{height:63px}
 .ng10 li.on a{color:#333;font-weight:500}
 .ng10 li a:hover{color:#333;font-weight:500}
 
-.ng11{background-color:#ffffff;padding:15px;border:1px solid #f1f3f5}
+.ng11{background-color:#ffffff;padding:15px;border:1px solid #f1f3f5; margin-bottom: 20px;}
 .ng11 h1{font-size:25px;color:#333;line-height:40px}
 .ng11 dt{float:left;line-height:32px}
 .ng11 dd{margin-left:20px}
