@@ -6,8 +6,17 @@ keyword: 용산공원
 {% comment %} 시리즈 + 파일 + 아이템 배열 합치기!! {% endcomment %}
 
 {% assign results = "" | split: "" %}
+{% for record-group in site.data.record-groups %}
+  {% assign results = results | push: record-group %}
+{% endfor %}
+{% for sub-record-group in site.data.sub-record-groups %}
+  {% assign results = results | push: sub-record-group %}
+{% endfor %}
 {% for set in site.data.series %}
   {% assign results = results | push: set %}
+{% endfor %}
+{% for sub-set in site.data.sub-series %}
+  {% assign results = results | push: sub-set %}
 {% endfor %}
 {% for file in site.data.files %}
   {% assign results = results | push: file %}
@@ -91,7 +100,7 @@ keyword: 용산공원
             {% for result in results %}
               <li>
                 <dl>
-                  <dt><a href="/series/1">{{ result.title }}</a></dt>
+                  <dt><a href="/record-group/rm/">{{ result.title }}</a></dt>
                   <dd>생산년도 : {{ result.created_year }}</dd>
                 </dl>
                 <a class="desc" href="#">세부보기</a>
