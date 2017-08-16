@@ -5,6 +5,7 @@ layout: page
 
   {% assign type = pathes[0] %}
   {% assign data = type | append: 's' %}
+  {% if type contains 'series' %}{% assign data = type %}{% endif %}
   {% assign id = pathes[1] %}
 
   {% assign node = site.data[data] | where: "id", id | first %}
@@ -27,16 +28,16 @@ layout: page
           <dd>
             <ul>
               <li class="home"><i class="xi-home"></i><a href="#">서울기록원</a></li>
-              <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy1</a></li> 
+              <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy1</a></li>
               <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy2</a></li>
               <li class="d3"><i class="xi-tab"></i><a href="/#">Hierarchy3</a></li>
-              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li>              
-            </ul>  
+              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li>
+            </ul>
           </dd>
-        </dl>  
+        </dl>
         <dl class="th01">
-          <dt><h1>{{ node.title }}</h1></dt>   
-          <dd>      
+          <dt><h1>{{ node.title }}</h1></dt>
+          <dd>
             <ul class="ng04">
               <li><a href="/collection-box/favorites/"><i class="xi-star"></i>즐겨찾기</a></li>
               <li><a href="#"><i class="xi-facebook"></i>페북공유</a></li>
@@ -119,7 +120,7 @@ layout: page
             </ul>
           </dd>
         </dl>
-        {% endif %}       
+        {% endif %}
       </div>
     </div>
   </div>
