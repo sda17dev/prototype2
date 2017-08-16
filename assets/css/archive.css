@@ -365,7 +365,7 @@ button.btn01{height:63px}
   margin-top: 30px;
 }
 
-#search_option-button {
+header #search_option-button {
   width: 40px !important;
   border: 1px solid #ccc;
   font-size: 26px;
