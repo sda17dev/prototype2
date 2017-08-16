@@ -24,9 +24,11 @@
           <option value="0" selected="selected">웹사이트에서 검색하기</option>
           <option value="1">기록에서 검색하기</option>
         </select>
-        <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="search_option-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="search_option-menu" aria-haspopup="true" style="width: 30px;" aria-activedescendant="ui-id-1" aria-labelledby="ui-id-2" aria-disabled="false"><span class="ui-icon ui-icon-triangle-1-s"></span></span>
+        <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="search_option-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="search_option-menu" aria-haspopup="true" style="width: 30px;" aria-activedescendant="ui-id-1" aria-labelledby="ui-id-2" aria-disabled="false">
+          <span class="ui-icon ui-icon-triangle-1-s"></span>
+        </span>
         <label for="search_query">검색어</label>
-        <input type="text" name="query" id="search_query"{% if include.keyword %} value="{{ include.keyword }}"{% endif %} />
+        <input type="text" name="query" id="search_query"{% if include.keyword %} value="{{ include.keyword }}"{% endif %} placeholder="기록에서 검색하기" />
         <button class="btn01"><a href="/search/yongsan-gongwon/">검색</a></button>
         <a class="btn01 btn01_01" href="#">상세검색</a>
         <a class="btn01 btn01_02" href="#"><i class="xi-close"></i>닫기</a>
