@@ -1,0 +1,59 @@
+---
+layout: page
+search_result_count: 12
+hierachy:
+  first: 용산공원수집기록(레코드그룹)
+  second: 새로운용산공원조성(시리즈)
+selected: 동국여도(아이템)
+---
+
+
+  <div class="inner">
+    <div class="TopA">
+      <ul class="ng06">
+        <li class="home"><i class="xi-home-o"></i><a href="/">홈</a></li>
+        <li><a href="/browse">탐색</a></li>
+        <li><a href="/record-group/yongsan">{{ page.hierachy.first }}</a></li> 
+        <li><a href="/series/yongsan">{{ page.hierachy.second }}</a></li>                                      
+        <!--li><a href="/search/yongsan-gongwon">검색결과 <strong>{{ page.search_result_count }}</strong>건</a></li-->
+        <li class="current"><a href="#">{{ page.selected }}</a></li>
+      </ul>
+    </div>
+    <div class="lowerA">
+      <dl class="ng07">
+            <h1>현재 보고 있는 위치</h1>
+          <dt></dt>
+          <dd>
+            <ul>
+              <li class="home"><i class="xi-home"></i><a href="/record-group/rm">{{ page.hierachy.first }}</a></li>
+              <li class="d1"><i class="xi-tab"></i><a href="/sub-record-group/rm">{{ page.hierachy.second }}</a></li>             
+            </ul>  
+          </dd>
+          </br> 
+            <h1>현재 위치 아래에 있는 목록</h1>
+        </dl>
+      <div class="fc06">
+        <div class="leftA">
+          <ul class="lc02">
+            <li>
+              <dl>
+                <dt><a href="/file/rm">{{ set.title }}</a></dt>
+                <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
+              </dl>
+              <a class="desc" href="/file/1">세부보기</a>
+              <span class="card">{{ set.level_of_description }}</span>
+            </li>
+          </ul>
+          <div class="pg01"><a href="#">다음 목록(30개)</a></div>
+        </div>
+        <div class="rightA">
+          <dl class="lc03">
+            <dt>기술계층(하위)</dt>
+            <dd> * 더 이상 하위 기술계층이 없습니다. 
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

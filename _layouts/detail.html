@@ -15,15 +15,28 @@ layout: page
       <div class="TopA">
         <ul class="ng06">
           <li class="home"><i class="xi-home-o"></i><a href="#">홈</a></li>
-          <li><a href="#">주택, 도시계획, 부동산</a></li>
-          <li><a href="#">도시계획국</a></li>
-          <li class="current"><a href="#">{{ node.title }} <span style="color: red; font-size: 80%;">(추가 작업 필요 / {{ node.component_presentation_option }} )</span></a></li>
+          <li><a href="#">Hierarchy1</a></li>
+          <li><a href="#">Hierarchy2</a></li>
+          <li class="current"><a href="#">{{ node.title }}</a></li>
         </ul>
       </div>
       <div class="lowerA">
-        <dl class="th01">
-          <dt><h1>{{ node.title }}</h1></dt>
+        <dl class="ng11">
+            <h1>연관 탐색화면으로 돌아가기</h1>
+          <dt></dt>
           <dd>
+            <ul>
+              <li class="home"><i class="xi-home"></i><a href="#">서울기록원</a></li>
+              <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy1</a></li> 
+              <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy2</a></li>
+              <li class="d3"><i class="xi-tab"></i><a href="/#">Hierarchy3</a></li>
+              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li>              
+            </ul>  
+          </dd>
+        </dl>  
+        <dl class="th01">
+          <dt><h1>{{ node.title }}</h1></dt>   
+          <dd>      
             <ul class="ng04">
               <li><a href="/collection-box/favorites/"><i class="xi-star"></i>즐겨찾기</a></li>
               <li><a href="#"><i class="xi-facebook"></i>페북공유</a></li>
@@ -36,21 +49,21 @@ layout: page
           <li class="open"><a class="btn02" href="#">열람하기</a></li>
           <li class="down"><a class="btn02" href="#">전체 다운로드</a></li>
         </ul>
-        <div class="etc01" style="display:none">
+        <div class="etc01" style="display:on">
           <a href="#" class="close"><i class="xi-close"></i></a>
           <div class="contents">
-            <iframe width="560" height="788" src="https://sda17dev.github.io/sda-prototype/pdfjs/web/viewer.html?file=../../files/58dcc6df8f23d4.93817358.pdf" frameborder="0" allowfullscreen></iframe>
+            <iframe width="1230" height="788" src="https://sda17dev.github.io/sda-prototype/pdfjs/web/viewer.html?file=../../files/58dcc6df8f23d4.93817358.pdf" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
         {% endif %}
         <dl class="tc02">
           <dt>해당되는 기록은 공개자료입니다.</dt>
           <dd>
-            <a href="#">온라인 열람 편의 제공 안내</a>
+            <a href="#">열람 편의 제공 안내</a>
             <ol>
-              <li><em>❶</em>해당되는 기록은 비공개자료이다.</li>
-              <li><em>❷</em>온라인 서비스를 통해서 메타 정보만 확인할 수 있다.</li>
-              <li><em>❸</em>비공개자료에 대해서는 서울기록원에 직접 찾아와 열람을 위한 절차를 통해 승인 받는다.</li>
+              <li><em>❶</em>해당되는 기록은 공개자료이다.</li>
+              <li><em>❷</em>온라인 서비스를 통해서 메타 정보를 확인할 수 있습니다. 직접 파일을 보지 못 하는 경우는 방문 및 열람이 가능합니다. </li>
+              <li><em>❸</em>만일 비공개자료일 경우 서울기록원에 직접 찾아와 열람을 위한 절차가 필요합니다.</li>
               <li><em>❹</em>특수한 경우 목록 및 메타정보만 확인 가능하다.</li>
             </ol>
           </dd>
@@ -84,40 +97,29 @@ layout: page
           <dd>
             <ul>
               <li>
-                <span class="t1"><strong>특별법 전문 초안</strong></span>
-                <span class="t2">[파일타입 : Doc]</span>
+                <span class="t1"><strong>첨부파일제목</strong></span>
+                <span class="t2"></span>
                 <span class="t3"><a href="#" class="btn02">다운로드</a></span>
               </li>
               <li>
-                <span class="t1"><strong>특별법 전문 원문</strong></span>
-                <span class="t2">[파일타입 : PDF]</span>
+                <span class="t1"><strong>첨부파일제목</strong></span>
+                <span class="t2"></span>
                 <span class="t3"><a href="#" class="btn02">다운로드</a></span>
               </li>
               <li>
-                <span class="t1"><strong>특별법 전문 목차</strong></span>
-                <span class="t2">[파일타입 : HWP]</span>
+                <span class="t1"><strong>첨부파일제목</strong></span>
+                <span class="t2"></span>
                 <span class="t3"><a href="#" class="btn02">다운로드</a></span>
               </li>
               <li>
-                <span class="t1"><strong>특별법 전문 목차</strong></span>
-                <span class="t2">[파일타입 : Doc]</span>
+                <span class="t1"><strong>첨부파일제목</strong></span>
+                <span class="t2"></span>
                 <span class="t3"><a href="#" class="btn02">다운로드</a></span>
               </li>
             </ul>
           </dd>
         </dl>
-        {% endif %}
-
-        <dl class="ng07">
-          <dt>자료맥락 :</dt>
-          <dd>
-            <ul>
-              <li class="home"><i class="xi-home"></i><a href="/browse">전체 이관된 기록 보기</a></li>
-              <li class="d1 current"><i class="xi-tab"></i><a href="/record-group/1">{{ node.title }}</a></li>
-              <li><span style="color: red; font-size: 80%;">(추가 작업 필요)</span></li>
-            </ul>
-          </dd>
-        </dl>
+        {% endif %}       
       </div>
     </div>
   </div>

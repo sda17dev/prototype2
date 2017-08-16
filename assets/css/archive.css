@@ -165,13 +165,13 @@ button.btn01{height:63px}
 .lc03 li .desc:hover{text-decoration:none;background-color:#eee}
 
 .lc04{margin-bottom:30px}
-.lc04 dt{font-size:24px;margin-bottom:20px}
+.lc04 dt{font-size:18px;margin-bottom:20px}
 .lc04 ul{border-top:1px solid #e6e6e6}
 .lc04 ul li{display:table;width:100%;border-bottom:1px solid #e6e6e6;border-left:1px solid #e6e6e6;border-right:1px solid #e6e6e6}
 .lc04 ul li span{display:table-cell;font-size:14px;color:#333;font-weight:500;padding:6px 2%}
 .lc04 ul li span.t1{width:20%}
 .lc04 ul li span.t3{border-left:1px solid #e6e6e6;width:17%;text-align:center}
-.lc04 ul li strong{font-size:18px}
+.lc04 ul li strong{font-size:16px}
 
 .lc05{margin-bottom:30px}
 .lc05 li{border-bottom:1px solid #cbcbcb;padding:15px 20px}
@@ -269,6 +269,21 @@ button.btn01{height:63px}
 .ng10 li.on a{color:#333;font-weight:500}
 .ng10 li a:hover{color:#333;font-weight:500}
 
+.ng11{background-color:#ffffff;padding:15px;border:1px solid #f1f3f5}
+.ng11 h1{font-size:25px;color:#333;line-height:40px}
+.ng11 dt{float:left;line-height:32px}
+.ng11 dd{margin-left:20px}
+.ng11 li a{font-size:14px;line-height:32px}
+.ng11 li i{font-size:14px;margin-right:3px}
+.ng11 li.home i{background-color:#fff;border:1px solid #e6e6e6;padding:2px 2px;font-size:14px}
+.ng11 li.d1{margin-left:20px}
+.ng11 li.d2{margin-left:40px}
+.ng11 li.d3{margin-left:60px}
+.ng11 li.d4{margin-left:80px;font-size:24px}
+.ng11 li.d5{margin-left:100px}
+.ng11 li.d6{margin-left:120px}
+.ng11 li.current a{font-size:16px; font-weight:bold}
+
 .pg01{border-top:1px solid #b8b8b8;text-align:right;padding-top:30px}
 .pg01 a{display:inline-block;border:1px solid #cbcbcb;background-color:#e4e4e4;font-size:14px;color:#212121;border-radius:3px;padding:5px 20px;font-weight:500}
 .pg01 a:hover{background-color:#666;color:#fff;text-decoration:none}
@@ -319,9 +334,9 @@ button.btn01{height:63px}
 
 .tc03{border:1px solid #e6e6e6;padding:19px 19px 10px;margin-bottom:30px}
 .tc03 dl{margin-bottom:10px;overflow:hidden}
-.tc03 dl dt{float:left;width:100px;position:relative;font-size:14px;color:#333;font-weight:500}
-.tc03 dl dt:after{content:":";position:absolute;right:0;font-size:14px;color:#333;font-weight:500}
-.tc03 dl dd{margin-left:120px;font-size:14px}
+.tc03 dl dt{float:left;width:100px;position:relative;font-size:18px;color:#333;font-weight:500}
+.tc03 dl dt:after{content:":";position:absolute;right:0;font-size:18px;color:#333;font-weight:500}
+.tc03 dl dd{margin-left:120px;font-size:18px}
 
 .td01{height:40px;line-height:40px}
 .td01 b{font-weight:bold}
