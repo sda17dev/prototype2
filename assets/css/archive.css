@@ -150,9 +150,9 @@ button.btn01{height:63px}
 .lc02 li .card{position:absolute;right:20px;top:20px;font-size:14px;color:#333;font-weight:500}
 .lc02 li .desc{display:inline-block;border:1px solid #e6e6e6;font-size:14px;border-radius:3px;padding:3px 20px;background-color:#fff}
 .lc02 li .desc:hover{text-decoration:none;background-color:#eee}
-.lc02 li.selected{border-color:#b2b2b2;border-top:5px solid #666;background-color:rgba(62, 95, 171, 0.5);}
+.lc02 li.selected{border-color:#b2b2b2;background-color:#b8b8b8;}
 
-.lc03{border:1px solid #b2b2b2;border-top:5px solid #666;background-color:#f1f3f5;padding:9px;padding-top:20px;position:relative}
+.lc03{border:1px solid #b2b2b2;background-color:#b8b8b8;padding:9px;padding-top:20px;position:relative}
 .lc03:after{content:"";display:block;width:16px;height:29px;background:url(../images/bg_arr01.png) no-repeat 0 0;position:absolute;top:18px;left:-16px}
 .lc03 dt{font-size:18px;color:#000;font-weight:500;margin-bottom:15px}
 .lc03 ul{background-color:#fff;border:1px solid #e6e6e6;border-top:none}
@@ -229,7 +229,7 @@ button.btn01{height:63px}
 .ng06 li.current a:hover{text-decoration:none;border-color:#ff0000}
 
 
-.ng07{background-color:#ffffff;padding:15px;border-top:5px solid #666;border-left:5px solid #666;border-right:5px solid #666}
+.ng07{background-color:#ffffff;padding:15px;border-top:3px solid #666}
 .ng07 h1{font-size:25px;color:#333;line-height:40px}
 .ng07 dt{float:left;line-height:32px}
 .ng07 dd{margin-left:20px}
