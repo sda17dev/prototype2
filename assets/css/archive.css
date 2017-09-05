@@ -152,7 +152,7 @@ button.btn01{height:63px}
 .lc02 li .desc:hover{text-decoration:none;background-color:#eee}
 .lc02 li.selected{border-color:#b2b2b2;background-color:#b8b8b8;}
 
-.lc03{border:1px solid #b2b2b2;border-top:10px solid #666;background-color:#f1f3f5;padding:9px;padding-top:26px;position:relative}
+.lc03{border:1px solid #b2b2b2;border-top:10px solid #666;background-color:#b8b8b8;padding:9px;padding-top:26px;position:relative}
 /*
 .lc03:after{content:"";display:block;width:16px;height:29px;background:url(../images/bg_arr01.png) no-repeat 0 0;position:absolute;top:18px;left:-16px}
 */
@@ -162,7 +162,6 @@ button.btn01{height:63px}
 }
 .lc03:after, .lc03:before {
 	right: 100%;
-	top: 40px;
 	border: solid transparent;
 	content: " ";
 	height: 0;
