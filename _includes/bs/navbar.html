@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+  <a class="navbar-brand" href="/">{{ site.title }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      {% for item in site.data.menu %}
+        <li class="nav-item{% if page.url == item.url %} active{% endif %}">
+          <a class="nav-link" href="{{ item.url }}">{{ item.title }}{% if page.url == item.url %} <span class="sr-only">(current)</span>{% endif %}</a>
+        </li>
+      {% endfor %}
+      <li class="nav-item"><a href="/search/yongsan-gongwon/" class="nav-link">검색</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">로그인</a></li>
+      <li class="nav-item"><a href="/collection-box/favorites/" class="nav-link">수집박스</a></li>
+    </ul>
+  </div>
+  </div>
+</nav>
