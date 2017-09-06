@@ -40,13 +40,13 @@ kramdown:
 
 # collections
 collections:
-  rooms:
+  posts:
     output: true
-    permalink: /room/:path/
+    permalink: /article/:path/
 
 defaults:
   -
     scope:
-      path: _rooms
+      path: _posts
     values:
-      layout: room
+      layout: bs/post
