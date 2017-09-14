@@ -16,25 +16,11 @@ layout: page
       <div class="TopA">
         <ul class="ng06">
           <li class="home"><i class="xi-home-o"></i><a href="#">홈</a></li>
-          <li><a href="#">Hierarchy1</a></li>
-          <li><a href="#">Hierarchy2</a></li>
+          <li><a href="/browse">탐색</a></li>
           <li class="current"><a href="#">{{ node.title }}</a></li>
         </ul>
       </div>
       <div class="lowerA">
-        <dl class="ng11">
-            <h1>연관 탐색화면으로 돌아가기</h1>
-          <dt></dt>
-          <dd>
-            <ul>
-              <li class="home"><i class="xi-home"></i><a href="#">서울기록원</a></li>
-              <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy1</a></li>
-              <!-- <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy2</a></li>
-              <li class="d3"><i class="xi-tab"></i><a href="/#">Hierarchy3</a></li>
-              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li> -->
-            </ul>
-          </dd>
-        </dl>
         <dl class="th01">
           <dt><h1>{{ node.title }}</h1></dt>
           <dd>
@@ -132,7 +118,21 @@ layout: page
             </ul>
           </dd>
         </dl>
+
         {% endif %}
+        <dl class="ng11">
+            <h1>연관 탐색화면으로 돌아가기</h1>
+          <dt></dt>
+          <dd>
+            <ul>
+              <li class="home"><i class="xi-home"></i><a href="#">서울기록원</a></li>
+              <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy1</a></li>
+              <!-- <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy2</a></li>
+              <li class="d3"><i class="xi-tab"></i><a href="/#">Hierarchy3</a></li>
+              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li> -->
+            </ul>
+          </dd>
+        </dl>
       </div>
     </div>
   </div>

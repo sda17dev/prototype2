@@ -23,7 +23,7 @@ selected: (s-S)용산공원조성관련
     </div>
     <div class="lowerA">
       <dl class="ng07">
-            <h1>카탈로그 - 맥락정보(From)</h1>
+            <h1>탐색 - 기술계층(상위)</h1>
           <dt></dt>
           <dd>
             <ul>
@@ -32,8 +32,8 @@ selected: (s-S)용산공원조성관련
             <li class="d2 current"><i class="xi-tab"></i><a href="/series/rm">{{ page.hierachy.third }}</a></li>
             </ul>  
           </dd>
-          </br> 
-            <h1>현재 기록위치</h1>
+          <!--/br> 
+            <h1>현재 기록위치</h1-->
         </dl> 
       <div class="fc06">
         <div class="leftA">
@@ -41,7 +41,7 @@ selected: (s-S)용산공원조성관련
             {% for set in site.data.sub-series %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
-                <dt><a href="/sub-series/rm">{{ set.title }}</a></dt>
+                <dt><a href="/sub-series/rm">{{ set.title }}({{ set.level_of_description }})</a></dt>
                 <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
               </dl>
               <a class="desc" href="/sub-series/1">세부보기</a>
@@ -59,7 +59,7 @@ selected: (s-S)용산공원조성관련
                 {% for set in site.data.files %}
                 <li>
                   <dl>
-                    <dt><a href="/file/rm">{{ set.title }}</a></dt>
+                    <dt><a href="/file/rm">{{ set.title }}({{ set.level_of_description }})</a></dt>
                     <dd>설명 : {{ set.description }}</dd>
                   </dl>
                   <a class="desc" href="/file/1">세부보기</a>

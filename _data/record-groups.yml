@@ -2,7 +2,7 @@
 # level 1
 
 - id: 1
-  title: 건축국(레코드그룹)
+  title: 건축국
   level_of_description: 레코드그룹
   created_year: 1995 - 2000
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
@@ -10,7 +10,7 @@
   component_presentation_option: unvalid
 
 - id: 1
-  title: 행정국(레코드그룹)
+  title: 행정국
   level_of_description: 레코드그룹
   created_year: 1995 - 2000
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
@@ -18,7 +18,7 @@
   component_presentation_option: unvalid
 
 - id: 2
-  title: 재무국(레코드그룹)
+  title: 재무국
   level_of_description: 레코드그룹
   created_year: 2016 - 2018
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
@@ -26,7 +26,7 @@
   component_presentation_option: valid
 
 - id: 3
-  title: 상수도관리국(레코드그룹)
+  title: 상수도관리국
   level_of_description: 레코드그룹
   created_year: 1950 - 1980 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
@@ -34,7 +34,7 @@
   component_presentation_option: unvalid
 
 - id: 4
-  title: 시의회(레코드그룹)
+  title: 시의회
   level_of_description: 레코드그룹
   created_year: 1950 - 1980 
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다.  
@@ -42,7 +42,7 @@
   component_presentation_option: unvalid
 
 - id: 5
-  title: 교육원(레코드그룹)
+  title: 교육원
   level_of_description: 레코드그룹
   created_year: 2008 - 2017
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
@@ -50,7 +50,7 @@
   component_presentation_option: valid
 
 - id: 6
-  title: 시립대(레코드그룹)
+  title: 시립대
   level_of_description: 레코드그룹
   created_year: 2008 - 2017
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
@@ -58,7 +58,7 @@
   component_presentation_option: valid 
 
 - id: 7
-  title: 세무국(레코드그룹)
+  title: 세무국
   level_of_description: 레코드그룹
   created_year: 2008 - 2017
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 

@@ -20,7 +20,7 @@ selected: (S)새로운용산공원조성
     </div>
     <div class="lowerA">
       <dl class="ng07">
-            <h1>카탈로그 - 맥락정보(From)</h1>
+            <h1>탐색 - 기술계층(상위)</h1>
           <dt></dt>
           <dd>
             <ul>
@@ -28,8 +28,8 @@ selected: (S)새로운용산공원조성
               <li class="d1 current"><i class="xi-tab"></i><a href="/sub-record-group/rm">{{ page.hierachy.second }}</a></li>
             </ul>  
           </dd>
-          </br> 
-            <h1>현재 기록위치</h1>
+          <!--/br> 
+            <h1>현재 기록위치</h1-->
         </dl>       
       <div class="fc06">
         <div class="leftA">
@@ -37,10 +37,10 @@ selected: (S)새로운용산공원조성
             {% for set in site.data.series %}
             <li{% if forloop.first == true %} class="selected"{% endif %}>
               <dl>
-                <dt><a href="/series/rm">{{ set.title }}</a></dt>
+                <dt><a href="/series/rm">{{ set.title }}({{ set.level_of_description }})</a></dt>
                 <dd>생산년도 : 2008년 ~ 2017년<p>설명 : {{ set.description }}</p></dd>
               </dl>
-              <a class="desc" href="/series/4">세부보기</a>
+              <a class="desc" href="/series/1">세부보기</a>
               <span class="card">{{ set.level_of_description }}</span>
             </li>
             {% endfor %}
@@ -55,7 +55,7 @@ selected: (S)새로운용산공원조성
                 {% for set in site.data.sub-series %}
                 <li>
                   <dl>
-                    <dt><a href="/sub-series/rm">{{ set.title }}</a></dt>
+                    <dt><a href="/sub-series/rm">{{ set.title }}({{ set.level_of_description }})</a></dt>
                     <dd>설명 : {{ set.description }}</dd>
                   </dl>
                   <a class="desc" href="/sub-series/1">세부보기</a>
