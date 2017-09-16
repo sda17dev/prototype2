@@ -1,0 +1,127 @@
+---
+layout: bs/page
+---
+
+{% assign pathes = page.path | replace: '.html', ''  | split: "/" %}
+
+{% assign type = pathes[1] %}
+{% assign data = type | append: 's' %}
+{% if type contains 'series' %}{% assign data = type %}{% endif %}
+{% assign id = pathes[2] %}
+
+{% assign node = site.data[data] | where: "id", id | first %}
+
+<div class="container">
+  <pre class="p-3 my-3 bg-light">debug: {{ pathes | inspect }}</pre>
+  <div class="row">
+    <div class="col-md-8 content">
+      <div class="breadcrumb">
+        <span class="badge badge-info">.breadcrumb</span>
+      </div>
+      <div class="details">
+        <span class="badge badge-info">.details</span>
+
+        <!-- h1.title -->
+        <h1 class="title">{{ node.title }} <span class="badge badge-pill badge-info">h1.title</span></h1>
+
+        <!-- .searchi-within -->
+        <div class="search-within">
+          <span class="badge badge-info">.search-within</span>
+          <div class="form-control">
+            <div class="form-group row">
+              <label for="example-text-input" class="col-2 col-form-label">Text</label>
+              <div class="col-10">
+                <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-search-input" class="col-2 col-form-label">Search</label>
+              <div class="col-10">
+                <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-email-input" class="col-2 col-form-label">Email</label>
+              <div class="col-10">
+                <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- detail content -->
+        {% if node.component_presentation_option == 'valid' %}
+        <div class="td02">*해당되는 건(Item)은 100개의 원본파일을 포함하고 있으며 온라인에서 직접 확인하고, 다운로드할 수 있습니다.  로그인 후 즐겨찾기를 통해 위치를 저장할 수 있습니다. 모두 가능합니다.</div>
+        <ul class="ng08">
+          <!--li class="open"><a class="btn02" href="#">열람하기</a></li>
+          <li class="down"><a class="btn02" href="#">전체 다운로드</a></li-->
+        </ul>
+          {% if type == 'series' and node.id == 7 %}
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="/assets/yongsan/01-1.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/01.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/02.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/03.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/04.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/05.jpg" alt=""></div>
+            <div class="item"><img src="/assets/yongsan/06.jpg" alt=""></div>
+        </div>
+          {% else %}
+        <div class="etc01" style="display:on">
+          <a href="#" class="close"><i class="xi-close"></i></a>
+          <div class="contents">
+            <iframe width="1230" height="788" src="//sda17dev.github.io/sda-prototype/pdfjs/web/viewer.html?file=../../files/58dcc6df8f23d4.93817358.pdf" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+          {% endif %}
+        {% endif %}
+
+        <dl class="highlight public-guide p-3 my-3">
+          <dt>해당되는 기록은 공개자료입니다.</dt>
+          <dd>
+            <a href="#">열람 편의 제공 안내</a>
+            <ol>
+              <li>해당되는 기록은 공개자료이다.</li>
+              <li>온라인 서비스를 통해서 메타 정보를 확인할 수 있습니다. 직접 파일을 보지 못 하는 경우는 방문 및 열람이 가능합니다. </li>
+              <li>만일 비공개자료일 경우 서울기록원에 직접 찾아와 열람을 위한 절차가 필요합니다.</li>
+              <li>특수한 경우 목록 및 메타정보만 확인 가능하다.</li>
+            </ol>
+          </dd>
+        </dl>
+        <div class="item-details">
+          <dl>
+            <dt>제목</dt>
+            <dd>{{ node.title }}</dd>
+          </dl>
+          <dl>
+            <dt>기술계층</dt>
+            <dd>{{ node.level_of_description }}</dd>
+          </dl>
+          <dl>
+            <dt>생산년도</dt>
+            <dd>{{ node.created_year }}</dd>
+          </dl>
+          <dl>
+            <dt>설명</dt>
+            <dd>{{ node.description }}</dd>
+          </dl>
+          <dl>
+            <dt>관리번호</dt>
+            <dd>{{ node.Identifier }}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 sidebar">
+      <div class="actions breadcrumb">
+        <span class="badge badge-info">.actions</span>
+      </div>
+      <div class="add-tags">
+        <span class="badge badge-info">.add-tags</span>
+      </div>
+      <div class="found-an-error">
+        <span class="badge badge-info">.found-an-error</span>
+      </div>
+    </div>
+  </div>
+</div>
