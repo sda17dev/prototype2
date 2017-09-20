@@ -4,7 +4,10 @@
 <div id="seoul-common-gnb"></div>
 <header{% if include.keyword %} class="searchMode"{% endif %}>
   <div class="inner">
-    <div class="lg01"><a href="/">{{ site.title }}</a></div>
+    <div class="lg01">
+      <a href="/">{{ site.title }}</a>
+      <a href="/bs/" style="background: none; display: inline;">bs</a>
+    </div>
     <nav>
       <menu>
         {% for item in site.data.menu %}

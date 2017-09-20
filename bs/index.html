@@ -1,0 +1,64 @@
+---
+layout: bs/page
+guides:
+  - |
+    연구자를 위한
+    안내
+  - |
+    기자, 큐레이터,
+    예술가
+  - |
+    영구기록물을 이관한
+    공무원
+  - |
+    서울시민을 위한
+    기록찾기
+posts:
+  -
+    title: '공지'
+    thumbnail: '@tc01_01.jpg'
+    excerpt: '[오픈] 1.0 오픈과 관련해 소스 공개합니다. 해당 GitHub 페이지를 참조하세요.'
+  -
+    title: '기록 이관과 수집'
+    thumbnail: '@tc01_02.jpg'
+    excerpt: '[기록 이관] 사진아카이브 자료를 기존 공간에서 디지털아카이브 엔진으로 이관했습니다.'
+  -
+    title: '건축 및 과정'
+    thumbnail: '@tc01_03.jpg'
+    excerpt: '[건축] 항온, 항습을 위한 장치 마련했습니다. 이를 위한 관련한 장치를 준비했습니다.'
+
+---
+
+<div class="container">
+    <div class="jumbotron my-3">
+      <h1 class="display-3">{{ site.title }}</h1>
+      <p class="lead">{{ site.description }}</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
+
+    <div class="section guides">
+        <div class="row px-3">
+            {% for guide in page.guides %}
+            <div class="col-md-3 bg-light p-3">
+                <span class="label">서울 디지털 아카이브 사용 안내 #{{ forloop.index | plus: 1 }}</span>
+                <h3>{{ guide | newline_to_br }}</h3>
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section news my-3">
+        <div class="row py-3">
+            {% for post in page.posts %}
+            <div class="col-md-4 p-3">
+                <h3>{{ post.title | newline_to_br }}</h3>
+                <img src="/assets/images/{{ post.thumbnail }}" alt="{{ post.title }}" class="img-fluid">
+                <p>{{ post.excerpt }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
