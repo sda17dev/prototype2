@@ -9,3 +9,23 @@
 .highlight {
   background-color: #f7f7f9;
 }
+
+.border-bottom-1 {
+	border-bottom: 1px solid #ccc;
+}
+
+.index {
+	.section.guides {
+		h3 {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+.browse {
+	.catalogue {
+		.btn {
+			border-radius: 1rem;
+		}
+	}
+}
