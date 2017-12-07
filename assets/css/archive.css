@@ -62,10 +62,9 @@ footer .rightA p b{color:#495057}
 .fc03 .rightA{width:50%;float:left;padding-top:20px}
 
 .fc04{padding:0 0 60px}
-.fc04 .TopA{border-bottom:1px solid #b8b8b8;padding:10px 0;height:40px}
+.fc04 .TopA{border-bottom:3px solid #666;padding:10px 0;height:40px}
 .fc04 .TopA .leftF{float:left}
 .fc04 .TopA .rightF{float:right}
-.fc04 .lowerA{padding:30px 30px 0 30px}
 
 .fc05{overflow:hidden}
 .fc05 .leftA{float:left;width:19%}
@@ -144,7 +143,7 @@ button.btn01{height:63px}
 .lc02{margin-bottom:30px}
 .lc02 li{border:1px solid #e6e6e6;position:relative;padding:20px;margin-bottom:10px}
 .lc02 li dt{margin-bottom:20px}
-.lc02 li dt a{font-size:24px;border-bottom:1px solid #333;color:#333;font-weight:500}
+.lc02 li dt a{font-size:30px;border-bottom:1px solid #333;color:#333;font-weight:500}
 .lc02 li dt a:hover{text-decoration:none}
 .lc02 li dd{margin-bottom:20px;font-size:14px}
 .lc02 li .card{position:absolute;right:20px;top:20px;font-size:14px;color:#333;font-weight:500}
@@ -297,7 +296,7 @@ button.btn01{height:63px}
 .ng10 li.on a{color:#333;font-weight:500}
 .ng10 li a:hover{color:#333;font-weight:500}
 
-.ng11{background-color:#ffffff;padding:15px;border:1px solid #f1f3f5; margin-bottom: 20px;}
+.ng11{background-color:#ffffff;padding:15px;border:0px solid #f1f3f5; margin-bottom: 0px;}
 .ng11 h1{font-size:25px;color:#333;line-height:40px}
 .ng11 dt{float:left;line-height:32px}
 .ng11 dd{margin-left:20px}
@@ -375,7 +374,7 @@ button.btn01{height:63px}
 .th01{border-bottom:1px solid #b8b8b8;padding-bottom:20px;margin-bottom:30px;overflow:hidden}
 .th01 dt{float:left}
 .th01 dd{float:right}
-.th01 h1{font-size:25px;color:#333;line-height:40px}
+.th01 h1{font-size:30px;color:#333;line-height:40px}
 .th01 .rightF{float:right}
 .th01 li{float:left;margin-left:10px}
 .th01 li a{display:block;height:40px;line-height:40px;border:1px solid #cbcbcb;background-color:#e4e4e4;color:#212121;padding:0 20px;border-radius:3px}

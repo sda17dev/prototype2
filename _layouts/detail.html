@@ -1,5 +1,11 @@
 ---
 layout: page
+hierachy:
+  first: (RG)건축국
+  second: (s-RG)도시계획
+  third : (S)새로운용산공원조성
+  forth : (s-S)용산공원조성관련
+selected: (F)용산공원 특별법 제정관련
 ---
   {% assign pathes = page.path | replace: '.html', ''  | split: "/" %}
 
@@ -19,8 +25,21 @@ layout: page
           <li><a href="/browse">탐색</a></li>
           <li class="current"><a href="#">{{ node.title }}</a></li>
         </ul>
-      </div>
+      </div>      
       <div class="lowerA">
+        <dl class="ng11">
+            <h1>탐색 - 기술계층(상위)</h1>
+          <dt></dt>
+          <dd>
+            <ul>
+              <li class="home"><i class="xi-home"></i><a href="#">(RG)건축국</a></li>
+              <li class="d1"><i class="xi-tab"></i><a href="#">(s-RG)도시계획</a></li>
+              <!--li class="d2 current"><i class="xi-tab"></i><a href="#">{{ node.title }}</a></li>
+              <li class="d3"><i class="xi-tab"></i><a href="/#">Hierarchy3</a></li>
+              <li class="d4 curren"><i class="xi-tab"></i><a href="/#"></a></li-->
+            </ul>
+          </dd>
+        </dl>      
         <dl class="th01">
           <dt><h1>{{ node.title }}</h1></dt>
           <dd>
@@ -121,18 +140,18 @@ layout: page
 
         {% endif %}
         <dl class="ng11">
-            <h1>연관 탐색화면으로 돌아가기</h1>
+            <h1>탐색 - 기술계층(상위)</h1>
           <dt></dt>
           <dd>
             <ul>
-              <li class="home"><i class="xi-home"></i><a href="#">서울기록원</a></li>
-              <li class="d1"><i class="xi-tab"></i><a href="#">Hierarchy1</a></li>
-              <!-- <li class="d2"><i class="xi-tab"></i><a href="#">Hierarchy2</a></li>
+              <li class="home"><i class="xi-home"></i><a href="#">(RG)건축국</a></li>
+              <li class="d1"><i class="xi-tab"></i><a href="#">(s-RG)도시계획</a></li>
+              <!--li class="d2 current"><i class="xi-tab"></i><a href="#">{{ node.title }}</a></li>
               <li class="d3"><i class="xi-tab"></i><a href="/#">Hierarchy3</a></li>
-              <li class="d4 curren"><i class="xi-tab"></i><a href="/#">{{ node.title }}</a></li> -->
+              <li class="d4 curren"><i class="xi-tab"></i><a href="/#"></a></li-->
             </ul>
           </dd>
-        </dl>
+        </dl> 
       </div>
     </div>
   </div>

@@ -2,11 +2,27 @@
 # level 1
 
 - id: 1
+  identifier: 10292044
   title: 건축국
+  date: 1968년 5월 2
   level_of_description: 레코드그룹
-  created_year: 1995 - 2000
+  agent1: 김영수
+  agent2: 서울특별시 건축국
+  classfication: 도시계획
+  business_system: 없음
+  business: 업무
+  event: 사건 
+  place: 장소
+  type: 기록유형(행정,수집)
+  sub_title: 건축국에 대한 기록, 1968년 이전
   description: 서울특별시가 1990년대부터 사용해 온 전자파일로 기록된 행정문서이며 서울특별시 기록관리시스템(RMS)로 부터 보존연한이 넘은 기록이다. 
-  Identifier: 10292044
+  물리적유형: 종이,Born-digital,특수유
+  format: PDF
+  size: 2Mbyte
+  Language: Kor
+  component_presentation_option: unvalid
+
+
   component_presentation_option: unvalid
 
 - id: 1
